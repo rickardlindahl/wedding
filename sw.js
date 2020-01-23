@@ -27,20 +27,24 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-450c6139a483cdc05107.js"
+    "url": "webpack-runtime-df7c386601a590fa8872.js"
   },
   {
     "url": "commons-66babfafdafa89eb817c.js"
   },
   {
-    "url": "app-d8cdb24257b35ec03cbb.js"
+    "url": "app-4836202616b9978948fa.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-fc6274426e5b89c8fb9c.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "4a9be33eac95e689bbb238f8bc0fee72"
+    "revision": "017a81c43eafec55c56c89b8dba01bf5"
+  },
+  {
+    "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
+    "revision": "c355c8040c47a63bfb3360e4b7cb6553"
   },
   {
     "url": "manifest.webmanifest",
@@ -132,12 +136,12 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   lastNavigationRequest = event.request.url
 
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^`), ``)
+  pathname = pathname.replace(new RegExp(`^/wedding`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-d8cdb24257b35ec03cbb.js`))) {
+  if (!resources || !(await caches.match(`/wedding/app-4836202616b9978948fa.js`))) {
     return await fetch(event.request)
   }
 
@@ -150,7 +154,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/wedding/offline-plugin-app-shell-fallback/index.html`
   const offlineShellWithKey = workbox.precaching.getCacheKeyForURL(offlineShell)
   return await caches.match(offlineShellWithKey)
 })
