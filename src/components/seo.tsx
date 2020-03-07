@@ -9,16 +9,21 @@ import React from "react"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-type MetaProps = JSX.IntrinsicElements['meta'];
+type MetaProps = JSX.IntrinsicElements["meta"]
 
 interface SEOProps {
-  title: string;
-  description?: string;
-  lang?: string;
-  meta?: MetaProps[];
+  title: string
+  description?: string
+  lang?: string
+  meta?: MetaProps[]
 }
 
-const SEO: React.FC<SEOProps> = ({ title, description = ``, lang = `en`, meta = [] }) => {
+const SEO: React.FC<SEOProps> = ({
+  title,
+  description = ``,
+  lang = `en`,
+  meta = [],
+}) => {
   const { site } = useStaticQuery(
     graphql`
       query {
