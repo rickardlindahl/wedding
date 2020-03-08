@@ -18,6 +18,14 @@ import ImageGifts from "../components/images/image-gifts"
 import ImageAccomodations from "../components/images/image-accomodations"
 import ImageRSVP from "../components/images/image-rsvp"
 import ContentBlock from "../components/content-block"
+import Ceremony from "../components/content/ceremony"
+import Party from "../components/content/party"
+import SpeechAndSpex from "../components/content/speech-and-spex"
+import Food from "../components/content/food"
+import CoverChargeAndGifts from "../components/content/cover-charge-and-gifts"
+import Transportation from "../components/content/transportation"
+import Accomodations from "../components/content/accomodations"
+import RSVP from "../components/content/rsvp"
 
 const IndexPage: React.FC = () => {
   const [ref, inView, entry] = useInView({
@@ -109,82 +117,14 @@ const IndexPage: React.FC = () => {
                 </div>
               </div>
             </div>
-            <ContentBlock renderImage={() => <ImageRings />} title="Vigsel">
-              <p>14:00</p>
-              <p>Baggböle Herrgård</p>
-              <p>905 92, Umeå</p>
-              <br />
-              <p>Era barn är varmt välkomna till vigseln.</p>
-            </ContentBlock>
-            <ContentBlock renderImage={() => <ImageBaggbole />} title="Bröllopsfest">
-              <p>17:00 - 03:00</p>
-              <p>Baggböle Herrgård</p>
-              <br />
-              <p>
-                Vi älskar era barn men under bröllopsfesten
-                <br />
-                älskar vi era barnvakter.
-              </p>
-            </ContentBlock>
-            <ContentBlock renderImage={() => <ImageChampagne />} title="Tal &amp; spex">
-              <p>Vill du göra något särskilt för brudparet?</p>
-              <br />
-              <p>
-                Alla tal och spex meddelas till toastparet på{" "}
-                <a href="mailto:linneaochrickard@gmail.com">
-                  linneaochrickard@gmail.com
-                </a>
-                .
-              </p>
-              <br />
-              <p>
-                Toastparet har även koll på lokal, logistik och tekniska
-                förutsättningar.
-              </p>
-            </ContentBlock>
-            <ContentBlock renderImage={() => <ImageFood />} title="Mat">
-              <p>
-                All specialkost meddelas till toastparet på{" "}
-                <a href="mailto:linneaochrickard@gmail.com">
-                  linneaochrickard@gmail.com
-                </a>
-                .
-              </p>
-            </ContentBlock>
-            <ContentBlock renderImage={() => <ImageGifts />} title="Kuvertavgift &amp; Presenter">
-              <p>Shizzz</p>
-            </ContentBlock>
-            <ContentBlock renderImage={() => <ImageTransportation />} title="Transport">
-            <p>
-                Busstransport mellan Scandic Hotel Plaza och Baggböle Herrgård.
-              </p>
-              <br />
-              <ul>
-                <li>
-                  <p>kl 13:30 - Plaza &#8594; Baggböle Herrgård</p>
-                </li>
-                <li>
-                  <p>kl 01:00 - Baggböle Herrgård &#8594; Plaza</p>
-                </li>
-                <li>
-                  <p>kl 03:15 - Baggböle Herrgård &#8594; Plaza</p>
-                </li>
-              </ul>
-              <br />
-              <p>
-                Anmäl plats till toastparet på{" "}
-                <a href="mailto:linneaochrickard@gmail.com">
-                  linneaochrickard@gmail.com
-                </a>
-                .
-              </p>
-            </ContentBlock>
-            <ContentBlock renderImage={() => <ImageAccomodations />} title="Boende">
-              <p>Shizzzleeee</p>
-            </ContentBlock>
-            <ContentBlock renderImage={() => <ImageRSVP />} title="O.S.A.">
-              <p>Svara oss ffs!!</p>
-            </ContentBlock>
+            <Ceremony />
+            <Party />
+            <SpeechAndSpex />
+            <Food />
+            <CoverChargeAndGifts />
+            <Transportation />
+            <Accomodations />
+            <RSVP />
           </ParallaxLayer>
         </ParallaxGroup>
       </Parallax>
