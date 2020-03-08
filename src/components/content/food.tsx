@@ -3,7 +3,7 @@ import ContentBlock from "../content-block"
 import ImageFood from "../images/image-food"
 
 const Food: React.FC = () => (
-  <ContentBlock renderImage={() => <ImageFood />} title="Mat">
+  <ContentBlock id="food" renderImage={() => <ImageFood />} title="Mat">
     <p>
       All specialkost meddelas till toastparet på{" "}
       <a href="mailto:linneaochrickard@gmail.com">linneaochrickard@gmail.com</a>

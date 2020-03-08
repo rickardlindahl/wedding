@@ -3,7 +3,11 @@ import ContentBlock from "../content-block"
 import ImageTransportation from "../images/image-transportation"
 
 const Transportation = () => (
-  <ContentBlock renderImage={() => <ImageTransportation />} title="Transport">
+  <ContentBlock
+    id="transportation"
+    renderImage={() => <ImageTransportation />}
+    title="Transport"
+  >
     <p>Busstransport mellan Scandic Hotel Plaza och Baggböle Herrgård.</p>
     <br />
     <ul>

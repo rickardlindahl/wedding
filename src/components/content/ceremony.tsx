@@ -3,7 +3,7 @@ import ContentBlock from "../content-block"
 import ImageRings from "../images/image-rings"
 
 const Ceremony: React.FC = () => (
-  <ContentBlock renderImage={() => <ImageRings />} title="Vigsel">
+  <ContentBlock id="ceremony" renderImage={() => <ImageRings />} title="Vigsel">
     <p>14:00</p>
     <p>Baggböle Herrgård</p>
     <p>905 92, Umeå</p>

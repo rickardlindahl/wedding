@@ -3,7 +3,11 @@ import ContentBlock from "../content-block"
 import ImageChampagne from "../images/image-champagne"
 
 const SpeechAndSpex: React.FC = () => (
-  <ContentBlock renderImage={() => <ImageChampagne />} title="Tal &amp; spex">
+  <ContentBlock
+    id="speech-and-spex"
+    renderImage={() => <ImageChampagne />}
+    title="Tal &amp; spex"
+  >
     <p>Vill du göra något särskilt för brudparet?</p>
     <br />
     <p>
