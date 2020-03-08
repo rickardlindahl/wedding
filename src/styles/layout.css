@@ -23,6 +23,23 @@ p {
   margin-bottom: 0.5rem;
 }
 
+.cover-image {
+  width: 100vw;
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sentinel {
+  background: transparent;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 46px;
+}
+
 .content-container {
   padding: 2rem;
   background-color: white;
