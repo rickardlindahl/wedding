@@ -17,6 +17,7 @@ import ImageTransportation from "../components/images/image-transportation"
 import ImageGifts from "../components/images/image-gifts"
 import ImageAccomodations from "../components/images/image-accomodations"
 import ImageRSVP from "../components/images/image-rsvp"
+import ContentBlock from "../components/content-block"
 
 const IndexPage: React.FC = () => {
   const [ref, inView, entry] = useInView({
@@ -108,24 +109,14 @@ const IndexPage: React.FC = () => {
                 </div>
               </div>
             </div>
-            <div className="content-container">
-              <div className="image-container">
-                <ImageRings />
-              </div>
-              <h2 className="subtitle">Vigsel</h2>
-              <div className="separator" />
+            <ContentBlock renderImage={() => <ImageRings />} title="Vigsel">
               <p>14:00</p>
               <p>Baggböle Herrgård</p>
               <p>905 92, Umeå</p>
               <br />
               <p>Era barn är varmt välkomna till vigseln.</p>
-            </div>
-            <div className="content-container">
-              <div className="image-container">
-                <ImageBaggbole />
-              </div>
-              <h2 className="subtitle">Bröllopsfest</h2>
-              <div className="separator" />
+            </ContentBlock>
+            <ContentBlock renderImage={() => <ImageBaggbole />} title="Bröllopsfest">
               <p>17:00 - 03:00</p>
               <p>Baggböle Herrgård</p>
               <br />
@@ -134,13 +125,8 @@ const IndexPage: React.FC = () => {
                 <br />
                 älskar vi era barnvakter.
               </p>
-            </div>
-            <div className="content-container">
-              <div className="image-container">
-                <ImageChampagne />
-              </div>
-              <h2 className="subtitle">Tal &amp; Spex</h2>
-              <div className="separator" />
+            </ContentBlock>
+            <ContentBlock renderImage={() => <ImageChampagne />} title="Tal &amp; spex">
               <p>Vill du göra något särskilt för brudparet?</p>
               <br />
               <p>
@@ -155,13 +141,8 @@ const IndexPage: React.FC = () => {
                 Toastparet har även koll på lokal, logistik och tekniska
                 förutsättningar.
               </p>
-            </div>
-            <div className="content-container">
-              <div className="image-container">
-                <ImageFood />
-              </div>
-              <h2 className="subtitle">Mat</h2>
-              <div className="separator" />
+            </ContentBlock>
+            <ContentBlock renderImage={() => <ImageFood />} title="Mat">
               <p>
                 All specialkost meddelas till toastparet på{" "}
                 <a href="mailto:linneaochrickard@gmail.com">
@@ -169,22 +150,12 @@ const IndexPage: React.FC = () => {
                 </a>
                 .
               </p>
-            </div>
-            <div className="content-container">
-              <div className="image-container">
-                <ImageGifts />
-              </div>
-              <h2 className="subtitle">Kuvertavgift &amp; Presenter</h2>
-              <div className="separator" />
+            </ContentBlock>
+            <ContentBlock renderImage={() => <ImageGifts />} title="Kuvertavgift &amp; Presenter">
               <p>Shizzz</p>
-            </div>
-            <div className="content-container">
-              <div className="image-container">
-                <ImageTransportation />
-              </div>
-              <h2 className="subtitle">Transport</h2>
-              <div className="separator" />
-              <p>
+            </ContentBlock>
+            <ContentBlock renderImage={() => <ImageTransportation />} title="Transport">
+            <p>
                 Busstransport mellan Scandic Hotel Plaza och Baggböle Herrgård.
               </p>
               <br />
@@ -207,23 +178,13 @@ const IndexPage: React.FC = () => {
                 </a>
                 .
               </p>
-            </div>
-            <div className="content-container">
-              <div className="image-container">
-                <ImageAccomodations />
-              </div>
-              <h2 className="subtitle">Boende</h2>
-              <div className="separator" />
+            </ContentBlock>
+            <ContentBlock renderImage={() => <ImageAccomodations />} title="Boende">
               <p>Shizzzleeee</p>
-            </div>
-            <div className="content-container">
-              <div className="image-container">
-                <ImageRSVP />
-              </div>
-              <h2 className="subtitle">O.S.A.</h2>
-              <div className="separator" />
+            </ContentBlock>
+            <ContentBlock renderImage={() => <ImageRSVP />} title="O.S.A.">
               <p>Svara oss ffs!!</p>
-            </div>
+            </ContentBlock>
           </ParallaxLayer>
         </ParallaxGroup>
       </Parallax>
