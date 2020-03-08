@@ -16,26 +16,18 @@ import RSVP from "../components/content/rsvp"
 
 const IndexPage: React.FC = () => {
   const data = useStaticQuery(graphql`
-  query SiteTitleQuery {
-    site {
-      siteMetadata {
-        title
+    query SiteTitleQuery {
+      site {
+        siteMetadata {
+          title
+        }
       }
     }
-  }
-`)
+  `)
 
-  const [ref, inView, entry] = useInView({
-    /* Optional options */
+  const [ref, inView] = useInView({
     threshold: 0,
   })
-
-  console.log(
-    "inView",
-    inView,
-    "entry.intersectionRatio",
-    entry && entry.intersectionRatio
-  )
 
   return (
     <>
@@ -43,42 +35,7 @@ const IndexPage: React.FC = () => {
       <CoverImage>
         <div className="sentinel" ref={ref}></div>
       </CoverImage>
-      <Header
-        siteTitle={data.site.siteTitle}
-        isSticky={!inView}
-      />
-      {/* <div className="sticky-wrapper" style={{ height: "46px" }}>
-        <div
-          // className="header"
-          style={{
-            width: "100%",
-            height: "46px",
-            backgroundColor: "white",
-            display: "flex",
-            flexDirection: "column-reverse",
-            ...(inView
-              ? {}
-              : {
-                  position: "fixed",
-                  top: 0,
-                  left: 0,
-                  zIndex: 9999,
-                  boxShadow: "0 6px 30px rgba(0,0,0,0.05)"
-                }),
-            // position: !inView ? "fixed" : undefined,
-          }}
-        >
-          <div className="header__hamburger-container">
-            <Hamburger
-              onToggle={() => {
-                // console.log("toggle active", isActive)
-                // setActive(!isActive)
-              }}
-              isActive={false}
-            />
-          </div>
-        </div>
-      </div> */}
+      <Header siteTitle={data.site.siteTitle} isSticky={!inView} />
       <Ceremony />
       <Party />
       <SpeechAndSpex />
@@ -98,7 +55,7 @@ const IndexPage: React.FC = () => {
           www.flaticon.com
         </a>
       </footer>
-      </>
+    </>
   )
 }
 
