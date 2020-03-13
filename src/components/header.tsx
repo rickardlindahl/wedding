@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import classNames from "classnames"
 import Hamburger from "./hamburger"
 import Modal from "./modal"
@@ -12,11 +12,13 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ title, isSticky, menuItems }) => {
   const [isActive, setActive] = useState(false)
 
-  if (isActive) {
-    document.body.classList.add("modal-active")
-  } else {
-    document.body.classList.remove("modal-active")
-  }
+  useEffect(() => {
+    if (isActive) {
+      document.body.classList.add("modal-active")
+    } else {
+      document.body.classList.remove("modal-active")
+    }
+  }, [isActive])
 
   return (
     <>
