@@ -28,6 +28,7 @@
     "@types/react": "^16.9.19",
     "@types/react-dom": "^16.9.5",
     "@types/react-helmet": "^5.0.15",
+    "gh-pages": "^2.2.0",
     "postcss-nested": "^4.2.1",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^1.19.1"
@@ -39,6 +40,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",

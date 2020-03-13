@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/wedding",
   siteMetadata: {
     title: `Linnéa & Rickard`,
     description: `Information om vigselceremoni, festen, etc`,
