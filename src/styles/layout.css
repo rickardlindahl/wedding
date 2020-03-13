@@ -65,6 +65,7 @@ p {
   border-radius: 50%;
   overflow: hidden;
   margin-bottom: 2rem;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 
 .subtitle {
