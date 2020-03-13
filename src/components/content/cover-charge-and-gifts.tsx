@@ -2,12 +2,12 @@ import React from "react"
 import ContentBlock from "../content-block"
 import ImageGifts from "../images/image-gifts"
 
+export const id = "cover-charge-and-gifts"
+
+export const title = "Kuvertavgift & Presenter"
+
 const CoverChargeAndGifts: React.FC = () => (
-  <ContentBlock
-    id="cover-charge-and-gifts"
-    renderImage={() => <ImageGifts />}
-    title="Kuvertavgift &amp; Presenter"
-  >
+  <ContentBlock id={id} renderImage={() => <ImageGifts />} title={title}>
     <p>Shizzz</p>
   </ContentBlock>
 )

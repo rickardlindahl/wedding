@@ -1,65 +1,53 @@
 import React, { useState } from "react"
 import classNames from "classnames"
 import Hamburger from "./hamburger"
+import Modal from "./modal"
 
 interface HeaderProps {
-  siteTitle: string
+  title: string
   isSticky: boolean
+  menuItems: { to: string; title: string }[]
 }
 
-const Header: React.FC<HeaderProps> = ({ siteTitle, isSticky }) => {
+const Header: React.FC<HeaderProps> = ({ title, isSticky, menuItems }) => {
   const [isActive, setActive] = useState(false)
 
-  const menu = [
-    {
-      to: "/#ceremony",
-      title: "Vigsel",
-    },
-    {
-      to: "/#party",
-      title: "Bröllopsfest",
-    },
-    {
-      to: "/#food",
-      title: "Mat",
-    },
-    {
-      to: "/#speech-and-spex",
-      title: "Tal & Spex",
-    },
-    {
-      to: "/#transportation",
-      title: "Transport",
-    },
-    {
-      to: "/accomodations",
-      title: "Boende",
-    },
-    {
-      to: "/cover-charge-and-gifts",
-      title: "Kuvertavgift & Presenter",
-    },
-    {
-      to: "/rsvp",
-      title: "OSA",
-    },
-  ]
+  if (isActive) {
+    document.body.classList.add("modal-active")
+  } else {
+    document.body.classList.remove("modal-active")
+  }
 
   return (
-    <div className="sticky-wrapper">
+    <>
+      <Modal
+        isVisible={isActive}
+        onItemClick={() => {
+          setActive(!isActive)
+        }}
+        menuItems={menuItems}
+      />
       <header
         role="banner"
-        className={classNames("header", { "is-sticky": isSticky })}
+        className={classNames("header", {
+          "is-sticky": isSticky || isActive,
+          "is-active": isActive,
+        })}
       >
-        <div className="header__title">Linnéa &amp; Rickard</div>
-        <Hamburger
-          onToggle={() => {
-            setActive(!isActive)
-          }}
-          isActive={isActive}
-        />
+        <div className="header__item header__item--left">
+          <Hamburger
+            onToggle={() => {
+              setActive(!isActive)
+            }}
+            isActive={isActive}
+          />
+        </div>
+        <div className="header__item header__item--center header__title">
+          {title}
+        </div>
+        <div className="header__item header__item--right" />
       </header>
-    </div>
+    </>
   )
 }
 

@@ -2,11 +2,15 @@ import React from "react"
 import ContentBlock from "../content-block"
 import ImageChampagne from "../images/image-champagne"
 
+export const id = "speech-and-spex"
+
+export const title = "Tal & spex"
+
 const SpeechAndSpex: React.FC = () => (
   <ContentBlock
-    id="speech-and-spex"
+    id={id}
     renderImage={() => <ImageChampagne />}
-    title="Tal &amp; spex"
+    title={title}
   >
     <p>Vill du göra något särskilt för brudparet?</p>
     <br />

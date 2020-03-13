@@ -1,6 +1,7 @@
 html {
   font-size: 16px;
   font-family: GeosansLight, sans-serif;
+  scroll-behavior: smooth;
 }
 
 a:link {
@@ -23,6 +24,10 @@ p {
   margin-bottom: 0.5rem;
 }
 
+.sticky-wrapper {
+  padding-top: 46px;
+}
+
 .cover-image {
   width: 100vw;
   height: 100vh;
@@ -41,7 +46,7 @@ p {
 }
 
 .content-container {
-  padding: 2rem;
+  padding: 4rem 2rem;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -72,4 +77,85 @@ p {
   width: 4rem;
   height: 1px;
   margin: 2rem auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.demo a {
+  position: absolute;
+  bottom: 88px;
+  left: 50%;
+  z-index: 2;
+  display: inline-block;
+  transform: translate(0, -50%);
+  transition: opacity .3s;
+}
+.demo a:hover {
+  opacity: .5;
+}
+
+#section05 a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 32px;
+  height: 32px;
+  margin-left: -20px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  transform: rotate(-45deg);
+  animation: sdb05 1.5s infinite;
+  box-sizing: border-box;
+}
+@-webkit-keyframes sdb05 {
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+@keyframes sdb05 {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+
+.wedding-date {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: auto;
+  z-index: 2000;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  font-size: 4rem;
+  opacity: .5;
 }

@@ -2,11 +2,15 @@ import React from "react"
 import ContentBlock from "../content-block"
 import ImageAccomodations from "../images/image-accomodations"
 
+export const id = "accomodations"
+
+export const title = "Boende"
+
 const Accomodations: React.FC = () => (
   <ContentBlock
-    id="accomodations"
+    id={id}
     renderImage={() => <ImageAccomodations />}
-    title="Boende"
+    title={title}
   >
     <p>Shizzzleeee</p>
   </ContentBlock>

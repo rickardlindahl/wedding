@@ -1,8 +1,3 @@
-.sticky-wrapper {
-  width: 100%;
-  height: 46px;
-}
-
 .header {
   display: flex;
   width: 100%;
@@ -12,15 +7,26 @@
   align-items: center;
 }
 
+.header.is-active {
+  background-color: rgb(222, 212, 203);
+}
+
 .header.is-sticky {
   position: fixed;
   top: 0;
   left: 0;
   z-index: 9999;
+}
+
+.header.is-sticky:not(.is-active) {
   box-shadow: 0 6px 30px rgba(0, 0, 0, 0.05);
 }
 
 .header__title {
   font-family: Kiona, sans-serif;
-  margin-left: 12px;
+  font-size: 1.125rem;
+}
+
+.header__item--left, .header__item--right {
+  flex: 1;
 }

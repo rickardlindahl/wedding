@@ -2,11 +2,15 @@ import React from "react"
 import ContentBlock from "../content-block"
 import ImageTransportation from "../images/image-transportation"
 
+export const id = "transporation"
+
+export const title = "Transport"
+
 const Transportation = () => (
   <ContentBlock
-    id="transportation"
+    id={id}
     renderImage={() => <ImageTransportation />}
-    title="Transport"
+    title={title}
   >
     <p>Busstransport mellan Scandic Hotel Plaza och Baggböle Herrgård.</p>
     <br />

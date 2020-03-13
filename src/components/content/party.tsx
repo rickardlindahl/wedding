@@ -2,12 +2,12 @@ import React from "react"
 import ContentBlock from "../content-block"
 import ImageBaggbole from "../images/image-baggbole"
 
+export const id = "party"
+
+export const title = "Bröllopsfest"
+
 const Party: React.FC = () => (
-  <ContentBlock
-    id="party"
-    renderImage={() => <ImageBaggbole />}
-    title="Bröllopsfest"
-  >
+  <ContentBlock id={id} renderImage={() => <ImageBaggbole />} title={title}>
     <p>17:00 - 03:00</p>
     <p>Baggböle Herrgård</p>
     <br />
