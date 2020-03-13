@@ -127,9 +127,9 @@ const IndexPage: React.FC = () => {
         ))}
       </div>
       <footer className="footer">
-        <Link to={`mailto:${data.site.siteMetadata.email}}`}>
+        <a href={`mailto:${data.site.siteMetadata.email}}`}>
           {data.site.siteMetadata.email}
-        </Link>
+        </a>
       </footer>
     </>
   )
