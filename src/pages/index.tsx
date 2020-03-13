@@ -88,6 +88,7 @@ const IndexPage: React.FC = () => {
       site {
         siteMetadata {
           title
+          email
         }
       }
     }
@@ -125,16 +126,10 @@ const IndexPage: React.FC = () => {
           <Component key={to} />
         ))}
       </div>
-      <footer>
-        Icons made by{" "}
-        <a href="https://www.flaticon.com/authors/freepik" title="Freepik">
-          Freepik
-        </a>{" "}
-        from{" "}
-        <a href="https://www.flaticon.com/" title="Flaticon">
-          {" "}
-          www.flaticon.com
-        </a>
+      <footer className="footer">
+        <Link to={`mailto:${data.site.siteMetadata.email}}`}>
+          {data.site.siteMetadata.email}
+        </Link>
       </footer>
     </>
   )

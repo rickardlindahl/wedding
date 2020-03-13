@@ -159,3 +159,10 @@ p {
   font-size: 4rem;
   opacity: .5;
 }
+
+.footer {
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
