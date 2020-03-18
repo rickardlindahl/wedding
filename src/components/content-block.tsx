@@ -13,7 +13,7 @@ const ContentBlock: React.FC<ContentBlockProps> = ({
   title,
   children,
 }) => (
-  <div id={id} className="content-container">
+  <div id={id} className="content-block">
     <div className="image-container">{renderImage()}</div>
     <h2 className="subtitle">{title}</h2>
     <div className="separator" />

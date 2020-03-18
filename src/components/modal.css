@@ -4,16 +4,14 @@ body.modal-active {
 
 .md-modal {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  max-width: 630px;
-  min-width: 320px;
-  height: auto;
-  z-index: 2000;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  max-width: 640px;
+  height: 100vh;
+  z-index: 1001;
   visibility: hidden;
   backface-visibility: hidden;
-  transform: translate(-50%, -50%);
 }
 
 .md-show {
@@ -31,6 +29,20 @@ body.modal-active {
   opacity: 0;
   background-color: rgb(222, 212, 203);
   transition: all .3s;
+}
+
+.md-hamburger-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+}
+
+.md-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .md-show ~ .md-overlay {

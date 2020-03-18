@@ -5,21 +5,7 @@
   background-color: white;
   justify-content: space-between;
   align-items: center;
-}
-
-.header.is-active {
-  background-color: rgb(222, 212, 203);
-}
-
-.header.is-sticky {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-}
-
-.header.is-sticky:not(.is-active) {
-  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.05);
+  background-color: white;
 }
 
 .header__title {

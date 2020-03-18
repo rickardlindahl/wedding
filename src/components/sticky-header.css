@@ -1,0 +1,15 @@
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  transform: translate3d(0, -100%, 0);
+  will-change: transform;
+  transition: transform .2s linear;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.05);
+}
+
+.sticky-header.is-sticky {
+  transform: translate3d(0,0,0);
+}

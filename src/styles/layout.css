@@ -21,17 +21,14 @@ a:active {
 }
 
 p {
+  color: black;
   margin-bottom: 0.5rem;
-}
-
-.sticky-wrapper {
-  padding-top: 46px;
+  font-size: 1.25rem;
 }
 
 .cover-image {
   width: 100vw;
   height: 100vh;
-  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -40,21 +37,22 @@ p {
 .sentinel {
   background: transparent;
   position: absolute;
-  bottom: 0;
+  top: 0;
   width: 100%;
-  height: 46px;
+  height: 10px;
 }
 
-.content-container {
+.content-block {
   padding: 4rem 2rem;
   background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  z-index: 0;
 }
 
-.content-container:nth-child(even) {
+.content-block:nth-child(even) {
   background-color: #f0ead6;
   background-color: rgb(222, 212, 203);
 }

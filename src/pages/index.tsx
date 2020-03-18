@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import classNames from "classnames"
 
@@ -38,6 +38,12 @@ import RSVP, {
   id as rsvpId,
   title as rsvpTitle,
 } from "../components/content/rsvp"
+import Parallax from "../components/parallax/parallax"
+import ParallaxGroup from "../components/parallax/parallax-group"
+import ParallaxLayer from "../components/parallax/parallax-layer"
+import Modal from "../components/modal"
+import Hamburger from "../components/hamburger"
+import StickyHeader from "../components/sticky-header"
 
 const content = [
   {
@@ -80,6 +86,11 @@ const content = [
     title: rsvpTitle,
     Component: RSVP,
   },
+  {
+    to: `/#schema`,
+    title: "Schema",
+    Component: () => <div id="schema">Schema</div>,
+  },
 ]
 
 const IndexPage: React.FC = () => {
@@ -94,37 +105,83 @@ const IndexPage: React.FC = () => {
     }
   `)
 
+  const [isMenuOpen, setMenuOpen] = useState(false)
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.classList.add("modal-active")
+    } else {
+      document.body.classList.remove("modal-active")
+    }
+  }, [isMenuOpen])
+
   const [ref, inView] = useInView({
     threshold: 0,
   })
 
   const isSticky = !inView
 
+  console.log("isSticky", isSticky)
+
+  const renderHamburger = () => (
+    console.log("renderHamburger"),
+    (
+      <Hamburger
+        onToggle={() => {
+          console.log("onToggle")
+          setMenuOpen(!isMenuOpen)
+        }}
+        isActive={isMenuOpen}
+      />
+    )
+  )
+
+  const renderHeader = () => (
+    <Header
+      title={data.site.siteMetadata.title}
+      renderHamburger={renderHamburger}
+    />
+  )
+
   return (
     <>
-      <SEO title="Home" />
-      <CoverImage>
-        <div className="wedding-date">
-          08/08
-          <br />
-          2020
-        </div>
-        <div id="section05" className="demo">
-          <Link to={content[0].to}>
-            <span></span>
-          </Link>
-        </div>
-        <div className="sentinel" ref={ref}></div>
-      </CoverImage>
-      <Header
-        title={data.site.siteMetadata.title}
-        isSticky={isSticky}
+      <Modal
+        isVisible={isMenuOpen}
+        onItemClick={() => {
+          setMenuOpen(!isMenuOpen)
+        }}
+        renderHamburger={renderHamburger}
         menuItems={content.map(({ to, title }) => ({ to, title }))}
       />
-      <div className={classNames({ "sticky-wrapper": isSticky })}>
-        {content.map(({ Component, to }) => (
-          <Component key={to} />
-        ))}
+      <StickyHeader isSticky={isSticky} renderHeader={renderHeader} />
+      <div className="apa">
+        <Parallax>
+          <ParallaxGroup>
+            <ParallaxLayer layer="deep">
+              <CoverImage>
+                <div className="wedding-date">
+                  <div className="sentinel" ref={ref} />
+                  08/08
+                  <br />
+                  2020
+                </div>
+                <div id="section05" className="demo">
+                  <Link to={content[0].to}>
+                    <span></span>
+                  </Link>
+                </div>
+              </CoverImage>
+            </ParallaxLayer>
+            <ParallaxLayer layer="base">
+              {renderHeader()}
+              <div className="content-container">
+                {content.map(({ Component, to }) => (
+                  <Component key={to} />
+                ))}
+              </div>
+            </ParallaxLayer>
+          </ParallaxGroup>
+        </Parallax>
       </div>
       <footer className="footer">
         <a href={`mailto:${data.site.siteMetadata.email}}`}>

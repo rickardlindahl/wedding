@@ -20,6 +20,7 @@ const CoverImage: React.FC<CoverImageProps> = ({ children }) => {
   `)
 
   const imageData = data.desktop.childImageSharp.fluid
+
   return (
     <BackgroundImage Tag="section" className="cover-image" fluid={imageData}>
       {children}

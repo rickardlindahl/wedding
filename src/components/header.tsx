@@ -1,56 +1,18 @@
-import React, { useState, useEffect } from "react"
-import classNames from "classnames"
-import Hamburger from "./hamburger"
-import Modal from "./modal"
+import React from "react"
 
-interface HeaderProps {
+export interface HeaderProps {
   title: string
-  isSticky: boolean
-  menuItems: { to: string; title: string }[]
+  renderHamburger(): React.ReactNode
 }
 
-const Header: React.FC<HeaderProps> = ({ title, isSticky, menuItems }) => {
-  const [isActive, setActive] = useState(false)
-
-  useEffect(() => {
-    if (isActive) {
-      document.body.classList.add("modal-active")
-    } else {
-      document.body.classList.remove("modal-active")
-    }
-  }, [isActive])
-
-  return (
-    <>
-      <Modal
-        isVisible={isActive}
-        onItemClick={() => {
-          setActive(!isActive)
-        }}
-        menuItems={menuItems}
-      />
-      <header
-        role="banner"
-        className={classNames("header", {
-          "is-sticky": isSticky || isActive,
-          "is-active": isActive,
-        })}
-      >
-        <div className="header__item header__item--left">
-          <Hamburger
-            onToggle={() => {
-              setActive(!isActive)
-            }}
-            isActive={isActive}
-          />
-        </div>
-        <div className="header__item header__item--center header__title">
-          {title}
-        </div>
-        <div className="header__item header__item--right" />
-      </header>
-    </>
-  )
-}
+const Header: React.FC<HeaderProps> = ({ title, renderHamburger }) => (
+  <header role="banner" className="header">
+    <div className="header__item header__item--left">{renderHamburger()}</div>
+    <div className="header__item header__item--center header__title">
+      {title}
+    </div>
+    <div className="header__item header__item--right" />
+  </header>
+)
 
 export default Header
