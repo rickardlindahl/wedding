@@ -1,7 +1,8 @@
 import React from "react"
+import "./content-block.css"
 
 interface ContentBlockProps {
-  id: string;
+  id: string
   renderImage(): React.ReactNode
   title: string
   children: React.ReactNode
@@ -14,9 +15,9 @@ const ContentBlock: React.FC<ContentBlockProps> = ({
   children,
 }) => (
   <div id={id} className="content-block">
-    <div className="image-container">{renderImage()}</div>
-    <h2 className="subtitle">{title}</h2>
-    <div className="separator" />
+    <div className="content-block__image-container">{renderImage()}</div>
+    <h2 className="content-block__title">{title}</h2>
+    <div className="content-block__separator" />
     {children}
   </div>
 )

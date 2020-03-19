@@ -1,13 +1,12 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
-import Div100vh from "react-div-100vh"
 
-interface CoverImageProps {
+interface ImageMidsummerProps {
   children: React.ReactNode
 }
 
-const CoverImage: React.FC<CoverImageProps> = ({ children }) => {
+const ImageMidsummer: React.FC<ImageMidsummerProps> = ({ children }) => {
   const data = useStaticQuery(graphql`
     query {
       desktop: file(relativePath: { eq: "rickard-linnea.jpg" }) {
@@ -23,12 +22,10 @@ const CoverImage: React.FC<CoverImageProps> = ({ children }) => {
   const imageData = data.desktop.childImageSharp.fluid
 
   return (
-    <Div100vh>
-      <BackgroundImage Tag="section" className="cover-image" fluid={imageData}>
-        {children}
-      </BackgroundImage>
-    </Div100vh>
+    <BackgroundImage Tag="section" className="cover-image" fluid={imageData}>
+      {children}
+    </BackgroundImage>
   )
 }
 
-export default CoverImage
+export default ImageMidsummer

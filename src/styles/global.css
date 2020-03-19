@@ -1,0 +1,27 @@
+html {
+  font-size: 16px;
+  font-family: GeosansLight, sans-serif;
+  scroll-behavior: smooth;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: black;
+}
+
+a:active {
+  color: black;
+}
+
+p {
+  color: black;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}

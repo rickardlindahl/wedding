@@ -1,0 +1,35 @@
+.content-block {
+  padding: 4rem 2rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 0;
+}
+
+.content-block:nth-child(even) {
+  background-color: #f0ead6;
+  background-color: rgb(222, 212, 203);
+}
+
+.content-block__image-container {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+
+.content-block__title {
+  font-family: Kiona, sans-serif;
+  font-size: 2rem;
+}
+
+.content-block__separator {
+  background: black;
+  width: 4rem;
+  height: 1px;
+  margin: 2rem auto;
+}

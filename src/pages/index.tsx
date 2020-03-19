@@ -2,10 +2,9 @@ import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import classNames from "classnames"
 
-import CoverImage from "../components/images/cover-image"
+import CoverImage from "../components/cover-image"
 import SEO from "../components/seo"
 import Header from "../components/header"
-import { useInView } from "react-intersection-observer"
 import Ceremony, {
   id as ceremonyId,
   title as ceremonyTitle,
@@ -40,6 +39,7 @@ import RSVP, {
 } from "../components/content/rsvp"
 import Modal from "../components/modal"
 import Hamburger from "../components/hamburger"
+import Footer from "../components/footer"
 
 const content = [
   {
@@ -95,7 +95,6 @@ const IndexPage: React.FC = () => {
       site {
         siteMetadata {
           title
-          email
         }
       }
     }
@@ -111,27 +110,20 @@ const IndexPage: React.FC = () => {
     }
   }, [isMenuOpen])
 
-  const [ref, inView, entry] = useInView({
-    threshold: 0,
-  })
-
-  const isSticky = !!entry && !inView
+  const [isSticky, setIsSticky] = useState(false)
 
   const renderHamburger = () => (
-    console.log("renderHamburger"),
-    (
-      <Hamburger
-        onToggle={() => {
-          console.log("onToggle")
-          setMenuOpen(!isMenuOpen)
-        }}
-        isActive={isMenuOpen}
-      />
-    )
+    <Hamburger
+      onToggle={() => {
+        setMenuOpen(!isMenuOpen)
+      }}
+      isActive={isMenuOpen}
+    />
   )
 
   return (
     <>
+      <SEO title={data.site.siteMetadata.title} />
       <Modal
         isVisible={isMenuOpen}
         onItemClick={() => {
@@ -140,19 +132,12 @@ const IndexPage: React.FC = () => {
         renderHamburger={renderHamburger}
         menuItems={content.map(({ to, title }) => ({ to, title }))}
       />
-      <CoverImage>
-        <div className="wedding-date">
-          08/08
-          <br />
-          2020
-        </div>
-        <div id="section05" className="demo">
-          <Link to={content[0].to}>
-            <span></span>
-          </Link>
-        </div>
-        <div className="sentinel" ref={ref} />
-      </CoverImage>
+      <CoverImage
+        scrollToUrl={content[0].to}
+        onSentinelChange={inView => {
+          setIsSticky(!inView)
+        }}
+      />
       <Header
         title={data.site.siteMetadata.title}
         renderHamburger={renderHamburger}
@@ -164,11 +149,7 @@ const IndexPage: React.FC = () => {
           <Component key={to} />
         ))}
       </div>
-      <footer className="footer">
-        <a href={`mailto:${data.site.siteMetadata.email}}`}>
-          {data.site.siteMetadata.email}
-        </a>
-      </footer>
+      <Footer />>
     </>
   )
 }
