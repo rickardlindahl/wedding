@@ -1,6 +1,7 @@
 import React from "react"
 import classNames from "classnames"
 import { Link } from "gatsby"
+import Div100vh from "react-div-100vh"
 import "./modal.css"
 
 interface ModalProps {
@@ -17,13 +18,13 @@ const Modal: React.FC<ModalProps> = ({
   renderHamburger,
 }) => (
   <>
-    <div
+    <Div100vh
       className={classNames("md-modal", "md-effect", {
         "md-show": isVisible,
       })}
     >
       <div className="md-hamburger-container">{renderHamburger()}</div>
-      <div className="md-content">
+      <Div100vh className="md-content">
         <div>
           {menuItems.map(({ to, title }) => (
             <div className="md-content__link-wrapper" key={to}>
@@ -33,8 +34,8 @@ const Modal: React.FC<ModalProps> = ({
             </div>
           ))}
         </div>
-      </div>
-    </div>
+      </Div100vh>
+    </Div100vh>
     <div className="md-overlay" />
   </>
 )

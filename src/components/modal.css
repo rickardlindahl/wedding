@@ -8,7 +8,6 @@ body.modal-active {
   left: 0;
   width: 100vw;
   max-width: 640px;
-  height: 100vh;
   z-index: 1001;
   visibility: hidden;
   backface-visibility: hidden;
@@ -42,7 +41,6 @@ body.modal-active {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
 .md-show ~ .md-overlay {

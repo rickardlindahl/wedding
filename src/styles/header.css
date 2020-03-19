@@ -1,7 +1,7 @@
 .header {
   display: flex;
   width: 100%;
-  height: 46px;
+  height: 49px;
   background-color: white;
   justify-content: space-between;
   align-items: center;
@@ -15,4 +15,18 @@
 
 .header__item--left, .header__item--right {
   flex: 1;
+}
+
+.sticky-wrapper {	
+  width: 100%;	
+  height: 49px;	
+}
+
+.header.is-sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.05);
 }

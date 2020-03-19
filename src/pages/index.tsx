@@ -38,12 +38,8 @@ import RSVP, {
   id as rsvpId,
   title as rsvpTitle,
 } from "../components/content/rsvp"
-import Parallax from "../components/parallax/parallax"
-import ParallaxGroup from "../components/parallax/parallax-group"
-import ParallaxLayer from "../components/parallax/parallax-layer"
 import Modal from "../components/modal"
 import Hamburger from "../components/hamburger"
-import StickyHeader from "../components/sticky-header"
 
 const content = [
   {
@@ -115,13 +111,11 @@ const IndexPage: React.FC = () => {
     }
   }, [isMenuOpen])
 
-  const [ref, inView] = useInView({
+  const [ref, inView, entry] = useInView({
     threshold: 0,
   })
 
-  const isSticky = !inView
-
-  console.log("isSticky", isSticky)
+  const isSticky = !!entry && !inView
 
   const renderHamburger = () => (
     console.log("renderHamburger"),
@@ -136,13 +130,6 @@ const IndexPage: React.FC = () => {
     )
   )
 
-  const renderHeader = () => (
-    <Header
-      title={data.site.siteMetadata.title}
-      renderHamburger={renderHamburger}
-    />
-  )
-
   return (
     <>
       <Modal
@@ -153,35 +140,29 @@ const IndexPage: React.FC = () => {
         renderHamburger={renderHamburger}
         menuItems={content.map(({ to, title }) => ({ to, title }))}
       />
-      <StickyHeader isSticky={isSticky} renderHeader={renderHeader} />
-      <div className="apa">
-        <Parallax>
-          <ParallaxGroup>
-            <ParallaxLayer layer="deep">
-              <CoverImage>
-                <div className="wedding-date">
-                  <div className="sentinel" ref={ref} />
-                  08/08
-                  <br />
-                  2020
-                </div>
-                <div id="section05" className="demo">
-                  <Link to={content[0].to}>
-                    <span></span>
-                  </Link>
-                </div>
-              </CoverImage>
-            </ParallaxLayer>
-            <ParallaxLayer layer="base">
-              {renderHeader()}
-              <div className="content-container">
-                {content.map(({ Component, to }) => (
-                  <Component key={to} />
-                ))}
-              </div>
-            </ParallaxLayer>
-          </ParallaxGroup>
-        </Parallax>
+      <CoverImage>
+        <div className="wedding-date">
+          08/08
+          <br />
+          2020
+        </div>
+        <div id="section05" className="demo">
+          <Link to={content[0].to}>
+            <span></span>
+          </Link>
+        </div>
+        <div className="sentinel" ref={ref} />
+      </CoverImage>
+      <Header
+        title={data.site.siteMetadata.title}
+        renderHamburger={renderHamburger}
+        isSticky={isSticky}
+      />
+      <div className={classNames({ "sticky-wrapper": isSticky })} />
+      <div>
+        {content.map(({ Component, to }) => (
+          <Component key={to} />
+        ))}
       </div>
       <footer className="footer">
         <a href={`mailto:${data.site.siteMetadata.email}}`}>
