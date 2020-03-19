@@ -12,7 +12,7 @@ const Accomodations: React.FC = () => (
     renderImage={() => <ImageAccomodations />}
     title={title}
   >
-    <p>Shizzzleeee</p>
+    <p>Information kommer snart.</p>
   </ContentBlock>
 )
 

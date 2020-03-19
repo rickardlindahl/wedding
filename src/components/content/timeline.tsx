@@ -12,7 +12,7 @@ const Timeline: React.FC = () => (
     renderImage={() => <ImageAccomodations />}
     title={title}
   >
-    <p>TBD</p>
+    <p>Information kommer snart.</p>
   </ContentBlock>
 )
 

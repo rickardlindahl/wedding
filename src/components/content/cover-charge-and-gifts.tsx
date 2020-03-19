@@ -8,7 +8,7 @@ export const title = "Kuvertavgift & Presenter"
 
 const CoverChargeAndGifts: React.FC = () => (
   <ContentBlock id={id} renderImage={() => <ImageGifts />} title={title}>
-    <p>Shizzz</p>
+    <p>Information kommer snart.</p>
   </ContentBlock>
 )
 

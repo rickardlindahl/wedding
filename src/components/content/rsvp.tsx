@@ -8,7 +8,7 @@ export const title = "O.S.A."
 
 const RSVP: React.FC = () => (
   <ContentBlock id={id} renderImage={() => <ImageRSVP />} title={title}>
-    <p>Svara oss ffs!!</p>
+    <p>Information kommer snart.</p>
   </ContentBlock>
 )
 
