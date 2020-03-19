@@ -66,12 +66,16 @@ body.modal-active {
 }
 
 .md-content__link-wrapper a {
+  display: inline-block;
   line-height: 2rem;
   text-decoration: none;
+  transform: scale(1);
+  will-change: transform;
+  transition: transform .2s ease;
 }
 
 .md-content__link-wrapper a:hover {
-  font-size: 1.625rem;
+  transform: scale(1.1);
 }
 
 @media screen and (min-width: 768px) {
