@@ -9,7 +9,7 @@ interface ScrollDownProps {
 const ScrollDown: React.FC<ScrollDownProps> = ({ scrollToUrl }) => (
   <div className="scroll-down">
     <Link to={scrollToUrl} className="scroll-down__link">
-      <span className="scroll-down__arrow"></span>
+      <span className="scroll-down__span"></span>
     </Link>
   </div>
 )

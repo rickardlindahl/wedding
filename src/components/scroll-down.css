@@ -12,7 +12,7 @@
   opacity: 0.5;
 }
 
-.scroll-down__arrow {
+.scroll-down__span {
   position: absolute;
   top: 0;
   left: 50%;
@@ -22,11 +22,11 @@
   border-left: 1px solid #fff;
   border-bottom: 1px solid #fff;
   transform: rotate(-45deg);
-  animation: scroll-down 1.5s infinite;
+  animation: scroll-down-arrow 1.5s infinite;
   box-sizing: border-box;
 }
 
-@keyframes scroll-down {
+@keyframes scroll-down-arrow {
   0% {
     transform: rotate(-45deg) translate(0, 0);
     opacity: 0;
@@ -37,5 +37,55 @@
   100% {
     transform: rotate(-45deg) translate(-20px, 20px);
     opacity: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .scroll-down__link {
+    padding-top: 60px;
+    bottom: 0;
+  }
+
+  .scroll-down__span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 30px;
+    height: 50px;
+    margin-left: -15px;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    animation: none;
+    transform: rotate(0);
+  }
+
+  .scroll-down__span::before {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    content: "";
+    width: 6px;
+    height: 6px;
+    margin-left: -3px;
+    background-color: #fff;
+    border-radius: 100%;
+    animation: scroll-down-mouse 2s infinite;
+  }
+
+  @keyframes scroll-down-mouse {
+    0% {
+      transform: translate(0, 0);
+      opacity: 0;
+    }
+    40% {
+      opacity: 1;
+    }
+    80% {
+      transform: translate(0, 20px);
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
   }
 }
