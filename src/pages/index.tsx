@@ -37,6 +37,10 @@ import RSVP, {
   id as rsvpId,
   title as rsvpTitle,
 } from "../components/content/rsvp"
+import Timeline, {
+  id as timelineId,
+  title as timelineTitle,
+} from "../components/content/timeline"
 import Modal from "../components/modal"
 import Hamburger from "../components/hamburger"
 import Footer from "../components/footer"
@@ -83,9 +87,9 @@ const content = [
     Component: RSVP,
   },
   {
-    to: `/#schema`,
-    title: "Schema",
-    Component: () => <div id="schema">Schema</div>,
+    to: `/#${timelineId}`,
+    title: timelineTitle,
+    Component: Timeline,
   },
 ]
 
