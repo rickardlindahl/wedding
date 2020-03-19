@@ -143,7 +143,6 @@ const IndexPage: React.FC = () => {
         renderHamburger={renderHamburger}
         isSticky={isSticky}
       />
-      <div className={classNames({ "sticky-wrapper": isSticky })} />
       <div>
         {content.map(({ Component, to }) => (
           <Component key={to} />

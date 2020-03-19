@@ -15,10 +15,18 @@ const ContentBlock: React.FC<ContentBlockProps> = ({
   children,
 }) => (
   <div id={id} className="content-block">
-    <div className="content-block__image-container">{renderImage()}</div>
-    <h2 className="content-block__title">{title}</h2>
-    <div className="content-block__separator" />
-    {children}
+    <div className="content-block__inner">
+    <div className="content-block__image-container">
+      <div className="content-block__image-container-image">
+      {renderImage()}
+      </div>
+    </div>
+    <div className="content-block__text-container">
+      <h2 className="content-block__title">{title}</h2>
+      <div className="content-block__separator" />
+      {children}
+    </div>
+    </div>
   </div>
 )
 

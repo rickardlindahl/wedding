@@ -23,9 +23,9 @@ const Modal: React.FC<ModalProps> = ({
         "md-show": isVisible,
       })}
     >
-      <div className="md-hamburger-container">{renderHamburger()}</div>
       <Div100vh className="md-content">
         <div>
+        <div className="md-hamburger-container">{renderHamburger()}</div>
           {menuItems.map(({ to, title }) => (
             <div className="md-content__link-wrapper" key={to}>
               <Link to={to} onClick={onItemClick}>

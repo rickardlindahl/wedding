@@ -13,16 +13,21 @@ const Header: React.FC<HeaderProps> = ({
   renderHamburger,
   isSticky,
 }) => (
+  <>
+  <div className={classNames({ "header__sticky-wrapper": isSticky })} />
   <header
     role="banner"
     className={classNames("header", { "is-sticky": isSticky })}
   >
-    <div className="header__item header__item--left">{renderHamburger()}</div>
-    <div className="header__item header__item--center header__title">
-      {title}
+    <div className="header__inner">
+      <div className="header__item header__item--left">{renderHamburger()}</div>
+      <div className="header__item header__item--center header__title">
+        {title}
+      </div>
+      <div className="header__item header__item--right" />
     </div>
-    <div className="header__item header__item--right" />
   </header>
+  </>
 )
 
 export default Header

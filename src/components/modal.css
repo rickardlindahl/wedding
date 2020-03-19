@@ -7,7 +7,6 @@ body.modal-active {
   top: 0;
   left: 0;
   width: 100vw;
-  max-width: 640px;
   z-index: 1001;
   visibility: hidden;
   backface-visibility: hidden;
@@ -73,4 +72,10 @@ body.modal-active {
 
 .md-content__link-wrapper a:hover {
   font-size: 1.625rem;
+}
+
+@media screen and (min-width: 768px) {
+  .md-hamburger-container {
+    position: static;
+  }
 }
