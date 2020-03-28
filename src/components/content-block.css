@@ -53,6 +53,10 @@
     flex-direction: column;
     flex: 1 1 0px;
   }
+
+  .content-block:nth-child(even) .content-block__inner {
+    flex-direction: row-reverse;
+  }
 }
 
 @media screen and (min-width: 1024px) {
