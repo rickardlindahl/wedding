@@ -60,7 +60,7 @@ body.modal-active {
 
 .md-content__link-wrapper {
   font-family: Kiona, sans-serif;
-  padding: .5rem;
+  padding: .25rem;
   text-align: center;
   font-size: 1.5rem;
 }
@@ -76,6 +76,12 @@ body.modal-active {
 
 .md-content__link-wrapper a:hover {
   transform: scale(1.1);
+}
+
+@media screen and (min-height: 624px) {
+  .md-content__link-wrapper {
+    padding: .5rem;
+  }
 }
 
 @media screen and (min-width: 768px) {

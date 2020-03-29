@@ -1,6 +1,7 @@
 import React from "react"
 import ContentBlock from "../content-block"
 import ImageTransportation from "../images/image-transportation"
+import EmailLink from "../email-link"
 
 export const id = "transporation"
 
@@ -27,9 +28,7 @@ const Transportation = () => (
     </ul>
     <br />
     <p>
-      Anmäl plats till toastparet på{" "}
-      <a href="mailto:linneaochrickard@gmail.com">linneaochrickard@gmail.com</a>
-      .
+      Anmäl plats till toastparet på <EmailLink />.
     </p>
   </ContentBlock>
 )

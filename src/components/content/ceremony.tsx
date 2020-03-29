@@ -16,7 +16,7 @@ const Ceremony: React.FC = () => (
     <p>Baggböle Herrgård</p>
     <p>905 92, Umeå</p>
     <br />
-    <p>Era barn är varmt välkomna till vigseln.</p>
+    <p>Era barn är varmt välkomna till vigselceremonin.</p>
   </ContentBlock>
 )
 

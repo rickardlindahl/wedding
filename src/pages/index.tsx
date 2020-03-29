@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { useStaticQuery, graphql, Link } from "gatsby"
-import classNames from "classnames"
+import { useStaticQuery, graphql } from "gatsby"
 
 import CoverImage from "../components/cover-image"
 import SEO from "../components/seo"
@@ -41,6 +40,18 @@ import Timeline, {
   id as timelineId,
   title as timelineTitle,
 } from "../components/content/timeline"
+import Toasters, {
+  id as toastersId,
+  title as toastersTitle,
+} from "../components/content/toasters"
+import Friday, {
+  id as fridayId,
+  title as fridayTitle,
+} from "../components/content/friday"
+import Sunday, {
+  id as sundayId,
+  title as sundayTitle,
+} from "../components/content/sunday"
 import Modal from "../components/modal"
 import Hamburger from "../components/hamburger"
 import Footer from "../components/footer"
@@ -85,6 +96,21 @@ const content = [
     to: `/#${rsvpId}`,
     title: rsvpTitle,
     Component: RSVP,
+  },
+  {
+    to: `/#${fridayId}`,
+    title: fridayTitle,
+    Component: Friday,
+  },
+  {
+    to: `/#${sundayId}`,
+    title: sundayTitle,
+    Component: Sunday,
+  },
+  {
+    to: `/#${toastersId}`,
+    title: toastersTitle,
+    Component: Toasters,
   },
   {
     to: `/#${timelineId}`,
