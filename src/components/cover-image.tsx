@@ -23,7 +23,7 @@ const CoverImage: React.FC<CoverImageProps> = ({
   }, [inView, entry])
 
   return (
-    <Div100vh>
+    <Div100vh className="cover-image-container">
       <ImageMidsummer>
         <div className="wedding-date">
           08/08
