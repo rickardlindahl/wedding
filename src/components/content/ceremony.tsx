@@ -14,7 +14,7 @@ const Ceremony: React.FC = () => (
   >
     <p>Dagen inleds med vigsel mellan brudparet.</p>
     <br />
-    <p>14:00</p>
+    <p>14.00</p>
     <p>Baggböle Herrgård</p>
     <p>905 92, Umeå</p>
     <br />

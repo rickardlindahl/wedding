@@ -20,13 +20,13 @@ const Transportation = () => (
     <br />
     <ul>
       <li>
-        <p>kl 13:30 - Plaza &#8594; Baggböle Herrgård</p>
+        <p>kl 13.30 - Plaza &#8594; Baggböle Herrgård</p>
       </li>
       <li>
-        <p>kl 01:00 - Baggböle Herrgård &#8594; Plaza</p>
+        <p>kl 01.00 - Baggböle Herrgård &#8594; Plaza</p>
       </li>
       <li>
-        <p>kl 03:15 - Baggböle Herrgård &#8594; Plaza</p>
+        <p>kl 03.15 - Baggböle Herrgård &#8594; Plaza</p>
       </li>
     </ul>
     <br />
