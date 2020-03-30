@@ -12,6 +12,8 @@ const Ceremony: React.FC = () => (
     renderImage={() => <ImageRings />}
     title={title}
   >
+    <p>Dagen inleds med vigsel mellan brudparet.</p>
+    <br />
     <p>14:00</p>
     <p>Baggböle Herrgård</p>
     <p>905 92, Umeå</p>
