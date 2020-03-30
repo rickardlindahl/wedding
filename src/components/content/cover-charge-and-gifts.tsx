@@ -20,7 +20,7 @@ const CoverChargeAndGifts: React.FC = () => (
       <br />
       Swish: 073-0366554
       <br />
-      Bankkonto: 9024.55.619.53
+      Bankkonto: 9024-5561953
     </p>
   </ContentBlock>
 )
