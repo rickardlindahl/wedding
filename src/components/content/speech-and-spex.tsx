@@ -9,7 +9,7 @@ export const title = "Tal & spex"
 
 const SpeechAndSpex: React.FC = () => (
   <ContentBlock id={id} renderImage={() => <ImageChampagne />} title={title}>
-    <p>Vill du göra något särskilt för brudparet?</p>
+    <p>Vill du göra något särskilt för brudparet under bröllopsfesten?</p>
     <br />
     <p>
       Alla tal och spex meddelas till toastparet på <EmailLink />.
