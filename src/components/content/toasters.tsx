@@ -10,14 +10,17 @@ export const title = "Toastparet"
 const Toasters: React.FC = () => (
   <ContentBlock id={id} renderImage={() => <ImageToasters />} title={title}>
     <p>
-      Toastmadame: Cecilia Hultstrand Ahlin. <br />
+      Toastmadame: Cecilia Hultstrand Ahlin.
+      <br />
       Toastmaster: Mikael Nygren.
       <br />
       <br />
-      Specialkost, tal, spex, transport, boende samt deltagande vid fredagens
-      och söndagens aktiviteter anmäls till toastparet på <EmailLink />. <br />
+      Specialkost, tal, spex, transport samt deltagande vid fredagens och
+      söndagens aktiviteter anmäls till toastparet på <EmailLink />.
       <br />
-      Till dem kan du även vända dig om du ha några frågor eller funderingar.
+      <br />
+      Till toastparet kan du även vända dig om du har några frågor eller
+      funderingar.
     </p>
   </ContentBlock>
 )
