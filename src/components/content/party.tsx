@@ -11,11 +11,7 @@ const Party: React.FC = () => (
     <p>17:00 - 03:00</p>
     <p>Baggböle Herrgård</p>
     <br />
-    <p>
-      Vi älskar era barn men under bröllopsfesten
-      <br />
-      älskar vi era barnvakter.
-    </p>
+    <p>Vi älskar era barn men under bröllopsfesten älskar vi era barnvakter.</p>
   </ContentBlock>
 )
 
