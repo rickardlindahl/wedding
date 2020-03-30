@@ -13,7 +13,10 @@ const Transportation = () => (
     renderImage={() => <ImageTransportation />}
     title={title}
   >
-    <p>Busstransport mellan Scandic Hotel Plaza och Baggböle Herrgård.</p>
+    <p>
+      Det finns möjlighet till busstransport mellan Scandic Plaza Umeå och
+      Baggböle Herrgård för de som önskar.
+    </p>
     <br />
     <ul>
       <li>
