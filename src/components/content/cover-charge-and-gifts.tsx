@@ -9,12 +9,13 @@ export const title = "Kuvertavgift & Presenter"
 const CoverChargeAndGifts: React.FC = () => (
   <ContentBlock id={id} renderImage={() => <ImageGifts />} title={title}>
     <p>
-      Vi har redan allt vi behöver. <br />
-      I stället ber vi om en kuvertavgift på 500 kr / person. <br />
-      Vill ni ändå ge oss något önskar vi bidrag till vår bröllopsresa.
-      <br/>
+      Vi har redan allt vi behöver. I stället ber vi om en kuvertavgift på 500
+      kr / person för bröllopsfesten. Vill ni ändå ge oss något önskar vi bidrag till vår
+      bröllopsresa.
       <br />
-      Kuvertavgiften betalas in via Swish eller bankkonto till brudgummen. Kom ihåg att ange namn vid betalning.
+      <br />
+      Kuvertavgiften betalas in via Swish eller bankkonto till brudgummen. Kom
+      ihåg att ange namn vid betalning.
       <br />
       <br />
       Swish: 073-0366554
