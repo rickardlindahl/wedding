@@ -12,11 +12,10 @@ const Food: React.FC = () => (
     <p>
       Det kommer serveras tilltugg, mat och dryck löpande under dagen och
       natten.
-      <br />
-      <br />
-      All specialkost meddelas till toastparet på{" "}
-      <EmailLink />
-      .
+    </p>
+    <br />
+    <p>
+      All specialkost meddelas till toastparet på <EmailLink />.
     </p>
   </ContentBlock>
 )
