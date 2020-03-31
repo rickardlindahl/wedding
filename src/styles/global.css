@@ -25,3 +25,8 @@ p {
   margin-bottom: 0.5rem;
   font-size: 1.25rem;
 }
+
+.onehundred-vh {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+}

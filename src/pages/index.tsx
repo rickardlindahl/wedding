@@ -55,6 +55,7 @@ import Sunday, {
 import Modal from "../components/modal"
 import Hamburger from "../components/hamburger"
 import Footer from "../components/footer"
+import { useWindowHeight } from "../hooks"
 
 const content = [
   {
@@ -129,6 +130,8 @@ const IndexPage: React.FC = () => {
       }
     }
   `)
+
+  useWindowHeight(25);
 
   const [isMenuOpen, setMenuOpen] = useState(false)
 

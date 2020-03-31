@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
-import Div100vh from "react-div-100vh"
-import ImageMidsummer from "./images/image-midsummer"
 import { useInView } from "react-intersection-observer"
+import BackgroundImage from "gatsby-background-image"
+import { useStaticQuery, graphql } from "gatsby"
 import ScrollDown from "./scroll-down"
 import "./cover-image.css"
 
@@ -14,6 +14,18 @@ const CoverImage: React.FC<CoverImageProps> = ({
   scrollToUrl,
   onSentinelChange,
 }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      desktop: file(relativePath: { eq: "rickard-linnea.jpg" }) {
+        childImageSharp {
+          fluid(quality: 100, maxWidth: 1920) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `)
+
   const [ref, inView, entry] = useInView({
     threshold: 0,
   })
@@ -23,17 +35,20 @@ const CoverImage: React.FC<CoverImageProps> = ({
   }, [inView, entry])
 
   return (
-    <Div100vh className="cover-image-container">
-      <ImageMidsummer>
-        <div className="wedding-date">
+    <section className="cover-image onehundred-vh">
+      <BackgroundImage
+        className="cover-image__image"
+        fluid={data.desktop.childImageSharp.fluid}
+      >
+        <div className="cover-image__wedding-date">
           08/08
           <br />
           2020
         </div>
         <ScrollDown scrollToUrl={scrollToUrl} />
-        <div className="sentinel" ref={ref} />
-      </ImageMidsummer>
-    </Div100vh>
+        <div className="cover-image__sentinel" ref={ref} />
+      </BackgroundImage>
+    </section>
   )
 }
 
