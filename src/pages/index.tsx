@@ -4,121 +4,39 @@ import { useStaticQuery, graphql } from "gatsby"
 import CoverImage from "../components/cover-image"
 import SEO from "../components/seo"
 import Header from "../components/header"
-import Ceremony, {
-  id as ceremonyId,
-  title as ceremonyTitle,
-} from "../components/content/ceremony"
-import Party, {
-  id as partyId,
-  title as partyTitle,
-} from "../components/content/party"
-import SpeechAndSpex, {
-  id as speechAndSpexId,
-  title as speechAndSpexTitle,
-} from "../components/content/speech-and-spex"
-import Food, {
-  id as foodId,
-  title as foodTitle,
-} from "../components/content/food"
-import CoverChargeAndGifts, {
-  id as coverChargeAndGiftsId,
-  title as coverChargeAndGiftsTitle,
-} from "../components/content/cover-charge-and-gifts"
-import Transportation, {
-  id as transportationId,
-  title as transportationTitle,
-} from "../components/content/transportation"
-import Accomodations, {
-  id as accomodationsId,
-  title as accomodationsTitle,
-} from "../components/content/accomodations"
-import RSVP, {
-  id as rsvpId,
-  title as rsvpTitle,
-} from "../components/content/rsvp"
-import Timeline, {
-  id as timelineId,
-  title as timelineTitle,
-} from "../components/content/timeline"
-import Toasters, {
-  id as toastersId,
-  title as toastersTitle,
-} from "../components/content/toasters"
-import Friday, {
-  id as fridayId,
-  title as fridayTitle,
-} from "../components/content/friday"
-import Sunday, {
-  id as sundayId,
-  title as sundayTitle,
-} from "../components/content/sunday"
+import * as Ceremony from "../components/content/ceremony"
+import * as Party from "../components/content/party"
+import * as SpeechAndSpex from "../components/content/speech-and-spex"
+import * as Food from "../components/content/food"
+import * as CoverChargeAndGifts from "../components/content/cover-charge-and-gifts"
+import * as Transportation from "../components/content/transportation"
+import * as Accomodations from "../components/content/accomodations"
+import * as RSVP from "../components/content/rsvp"
+import * as Timeline from "../components/content/timeline"
+import * as Toasters from "../components/content/toasters"
+import * as Friday from "../components/content/friday"
+import * as Sunday from "../components/content/sunday"
 import Modal from "../components/modal"
 import Hamburger from "../components/hamburger"
 import Footer from "../components/footer"
 import { useWindowHeight } from "../hooks"
 
-const content = [
-  {
-    to: `/#${ceremonyId}`,
-    title: ceremonyTitle,
-    Component: Ceremony,
-  },
-  {
-    to: `/#${partyId}`,
-    title: partyTitle,
-    Component: Party,
-  },
-  {
-    to: `/#${speechAndSpexId}`,
-    title: speechAndSpexTitle,
-    Component: SpeechAndSpex,
-  },
-  {
-    to: `/#${foodId}`,
-    title: foodTitle,
-    Component: Food,
-  },
-  {
-    to: `/#${coverChargeAndGiftsId}`,
-    title: coverChargeAndGiftsTitle,
-    Component: CoverChargeAndGifts,
-  },
-  {
-    to: `/#${transportationId}`,
-    title: transportationTitle,
-    Component: Transportation,
-  },
-  {
-    to: `/#${accomodationsId}`,
-    title: accomodationsTitle,
-    Component: Accomodations,
-  },
-  {
-    to: `/#${rsvpId}`,
-    title: rsvpTitle,
-    Component: RSVP,
-  },
-  {
-    to: `/#${fridayId}`,
-    title: fridayTitle,
-    Component: Friday,
-  },
-  {
-    to: `/#${sundayId}`,
-    title: sundayTitle,
-    Component: Sunday,
-  },
-  {
-    to: `/#${toastersId}`,
-    title: toastersTitle,
-    Component: Toasters,
-  },
-  {
-    to: `/#${timelineId}`,
-    title: timelineTitle,
-    Component: Timeline,
-  },
+const blocks = [
+  Ceremony,
+  Party,
+  SpeechAndSpex,
+  Food,
+  CoverChargeAndGifts,
+  Transportation,
+  Accomodations,
+  RSVP,
+  Friday,
+  Sunday,
+  Toasters,
+  Timeline,
 ]
+
+const createLinkFromId = (id: string) => `/#${id}`
 
 const IndexPage: React.FC = () => {
   const data = useStaticQuery(graphql`
@@ -131,7 +49,7 @@ const IndexPage: React.FC = () => {
     }
   `)
 
-  useWindowHeight(25);
+  useWindowHeight(25)
 
   const [isMenuOpen, setMenuOpen] = useState(false)
 
@@ -163,10 +81,13 @@ const IndexPage: React.FC = () => {
           setMenuOpen(!isMenuOpen)
         }}
         renderHamburger={renderHamburger}
-        menuItems={content.map(({ to, title }) => ({ to, title }))}
+        menuItems={blocks.map(({ id, title }) => ({
+          to: createLinkFromId(id),
+          title,
+        }))}
       />
       <CoverImage
-        scrollToUrl={content[0].to}
+        scrollToUrl={createLinkFromId(blocks[0].id)}
         onSentinelChange={inView => {
           setIsSticky(!inView)
         }}
@@ -177,8 +98,8 @@ const IndexPage: React.FC = () => {
         isSticky={isSticky}
       />
       <div>
-        {content.map(({ Component, to }) => (
-          <Component key={to} />
+        {blocks.map(({ id, default: Component }) => (
+          <Component key={id} />
         ))}
       </div>
       <Footer />>
