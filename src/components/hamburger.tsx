@@ -14,6 +14,7 @@ const Hamburger: React.FC<HamburgerProps> = ({ onToggle, isActive }) => (
     })}
     type="button"
     onClick={_e => onToggle()}
+    aria-label="Menu"
   >
     <span className="hamburger-box">
       <span className="hamburger-inner"></span>
