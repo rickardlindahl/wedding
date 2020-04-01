@@ -18,7 +18,6 @@ import * as Sunday from "../components/content/sunday"
 import Modal from "../components/modal"
 import Hamburger from "../components/hamburger"
 import Footer from "../components/footer"
-import { useWindowHeight } from "../hooks"
 
 const blocks = [
   Ceremony,
@@ -47,8 +46,6 @@ const IndexPage: React.FC = () => {
       }
     }
   `)
-
-  useWindowHeight(25)
 
   const [isMenuOpen, setMenuOpen] = useState(false)
 
