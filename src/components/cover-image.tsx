@@ -31,7 +31,11 @@ const CoverImage: React.FC<CoverImageProps> = ({
   })
 
   useEffect(() => {
-    onSentinelChange(!!entry && inView)
+    if (!entry) {
+      return
+    }
+
+    onSentinelChange(inView)
   }, [inView, entry])
 
   return (
