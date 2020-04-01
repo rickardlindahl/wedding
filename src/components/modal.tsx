@@ -2,7 +2,6 @@ import React from "react"
 import classNames from "classnames"
 import { Link } from "gatsby"
 import "./modal.css"
-import Div100vh from "react-div-100vh"
 
 interface ModalProps {
   isVisible: boolean
@@ -18,12 +17,12 @@ const Modal: React.FC<ModalProps> = ({
   renderHamburger,
 }) => (
   <>
-    <Div100vh
+    <div
       className={classNames("md-modal", "md-effect", {
         "md-show": isVisible,
       })}
     >
-      <Div100vh className="md-content">
+      <div className="md-content">
         <div>
           <div className="md-hamburger-container">{renderHamburger()}</div>
           {menuItems.map(({ to, title }) => (
@@ -34,8 +33,8 @@ const Modal: React.FC<ModalProps> = ({
             </div>
           ))}
         </div>
-      </Div100vh>
-    </Div100vh>
+      </div>
+    </div>
     <div className="md-overlay" />
   </>
 )

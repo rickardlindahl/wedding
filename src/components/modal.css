@@ -7,6 +7,7 @@ body.modal-active {
   top: 0;
   left: 0;
   width: 100vw;
+  height: 100vh;
   z-index: 1001;
   visibility: hidden;
   backface-visibility: hidden;
@@ -30,16 +31,14 @@ body.modal-active {
 }
 
 .md-hamburger-container {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: static;
   z-index: 1001;
 }
 
 .md-content {
   display: flex;
   justify-content: center;
-  align-items: center;
+  height: 100vh;
 }
 
 .md-show ~ .md-overlay {
@@ -85,7 +84,7 @@ body.modal-active {
 }
 
 @media screen and (min-width: 768px) {
-  .md-hamburger-container {
-    position: static;
+  .md-content {
+    align-items: center;
   }
 }
