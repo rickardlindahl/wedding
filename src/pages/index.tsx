@@ -156,7 +156,7 @@ const IndexPage: React.FC = () => {
 
   return (
     <>
-      <SEO title={data.site.siteMetadata.title} />
+      <SEO title="Bröllop 8/8 2020" />
       <Modal
         isVisible={isMenuOpen}
         onItemClick={() => {

@@ -24,7 +24,9 @@ const SEO: React.FC<SEOProps> = ({
   lang = `en`,
   meta = [],
 }) => {
-  const { site } = useStaticQuery(
+  const {
+    site: { siteMetadata },
+  } = useStaticQuery(
     graphql`
       query {
         site {
@@ -32,13 +34,15 @@ const SEO: React.FC<SEOProps> = ({
             title
             description
             author
+            url
+            image
           }
         }
       }
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = description || siteMetadata.description
 
   return (
     <Helmet
@@ -46,7 +50,7 @@ const SEO: React.FC<SEOProps> = ({
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`%s | ${siteMetadata.title}`}
       meta={[
         {
           name: `description`,
@@ -55,6 +59,30 @@ const SEO: React.FC<SEOProps> = ({
         {
           property: `og:title`,
           content: title,
+        },
+        {
+          property: "og:url",
+          content: siteMetadata.url,
+        },
+        {
+          property: "og:image",
+          content: siteMetadata.image,
+        },
+        {
+          property: "og:image:type",
+          content: "image/jpeg",
+        },
+        {
+          property: "og:image:width",
+          content: "1920",
+        },
+        {
+          property: "og:image:height",
+          content: "1080",
+        },
+        {
+          property: "og:image:alt",
+          content: "Linnéa & Rickard",
         },
         {
           property: `og:description`,
@@ -70,7 +98,7 @@ const SEO: React.FC<SEOProps> = ({
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          content: siteMetadata.author,
         },
         {
           name: `twitter:title`,

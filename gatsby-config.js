@@ -2,9 +2,11 @@ module.exports = {
   pathPrefix: "/wedding",
   siteMetadata: {
     title: `Linnéa & Rickard`,
-    description: `Information om vigselceremoni, festen, etc`,
+    description: `Linnéa & Rickards bröllop 8/8 2020. Här hittar du all information om vigselceremonin, bröllopsfesten, mat, tal, transport, boende, m.m.`,
     author: `@rickardlindahl`,
     email: `linneaochrickard@gmail.com`,
+    url: "https://wedding.rickardlindahl.com",
+    image: "/images/1080p_RickardLinnea.jpg",
   },
   plugins: [
     {
