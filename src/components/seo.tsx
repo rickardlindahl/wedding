@@ -20,8 +20,8 @@ interface SEOProps {
 
 const SEO: React.FC<SEOProps> = ({
   title,
-  description = ``,
-  lang = `en`,
+  description = "",
+  lang = "en",
   meta = [],
 }) => {
   const {
@@ -53,11 +53,11 @@ const SEO: React.FC<SEOProps> = ({
       titleTemplate={`%s | ${siteMetadata.title}`}
       meta={[
         {
-          name: `description`,
+          name: "description",
           content: metaDescription,
         },
         {
-          property: `og:title`,
+          property: "og:title",
           content: title,
         },
         {
@@ -85,27 +85,27 @@ const SEO: React.FC<SEOProps> = ({
           content: "Linnéa & Rickard",
         },
         {
-          property: `og:description`,
+          property: "og:description",
           content: metaDescription,
         },
         {
-          property: `og:type`,
-          content: `website`,
+          property: "og:type",
+          content: "website",
         },
         {
-          name: `twitter:card`,
-          content: `summary`,
+          name: "twitter:card",
+          content: "summary",
         },
         {
-          name: `twitter:creator`,
+          name: "twitter:creator",
           content: siteMetadata.author,
         },
         {
-          name: `twitter:title`,
+          name: "twitter:title",
           content: title,
         },
         {
-          name: `twitter:description`,
+          name: "twitter:description",
           content: metaDescription,
         },
         ...meta,
