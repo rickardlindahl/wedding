@@ -45,6 +45,7 @@ const CoverImage: React.FC<CoverImageProps> = ({
         className="cover-image__image"
         fluid={data.desktop.childImageSharp.fluid}
         loading="eager"
+        imgStyle={{ pointerEvents: "none" }}
       ></Img>
       <div className="cover-image__wedding-date">
         08/08
