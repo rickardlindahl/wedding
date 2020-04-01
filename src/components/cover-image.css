@@ -13,7 +13,6 @@
   left: 50%;
   width: 100%;
   height: auto;
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   color: white;
   text-align: center;
