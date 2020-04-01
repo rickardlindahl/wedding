@@ -19,6 +19,7 @@
   text-align: center;
   font-size: 4rem;
   opacity: 0.5;
+  user-select: none;
 }
 
 .cover-image__sentinel {
