@@ -7,6 +7,10 @@
   height: 100%;
 }
 
+.cover-image__image.gatsby-image-wrapper > div {
+  padding-bottom: 100vh !important;
+}
+
 .cover-image__wedding-date {
   position: absolute;
   top: 50%;
