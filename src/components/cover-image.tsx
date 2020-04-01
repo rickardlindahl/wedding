@@ -18,7 +18,7 @@ const CoverImage: React.FC<CoverImageProps> = ({
     query {
       desktop: file(relativePath: { eq: "rickard-linnea.jpg" }) {
         childImageSharp {
-          fluid(quality: 100, maxWidth: 1920) {
+          fluid(quality: 90, maxWidth: 1920) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
