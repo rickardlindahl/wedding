@@ -1,6 +1,7 @@
 import React, { useEffect } from "react"
 import { useInView } from "react-intersection-observer"
 import { useStaticQuery, graphql } from "gatsby"
+import Div100vh from "react-div-100vh"
 import Img from "gatsby-image"
 import ScrollDown from "./scroll-down"
 import "./cover-image.css"
@@ -39,7 +40,7 @@ const CoverImage: React.FC<CoverImageProps> = ({
   }, [inView, entry])
 
   return (
-    <section className="cover-image">
+    <Div100vh className="cover-image">
       <Img
         className="cover-image__image"
         fluid={data.desktop.childImageSharp.fluid}
@@ -53,7 +54,7 @@ const CoverImage: React.FC<CoverImageProps> = ({
       </div>
       <ScrollDown scrollToUrl={scrollToUrl} />
       <div className="cover-image__sentinel" ref={ref} />
-    </section>
+    </Div100vh>
   )
 }
 
