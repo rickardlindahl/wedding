@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
-
 import CoverImage from "../components/cover-image"
 import SEO from "../components/seo"
 import Header from "../components/header"
