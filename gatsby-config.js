@@ -31,7 +31,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Linnéa & Rickards bröllop`,
-        short_name: `Linnéa & Rickard`,
+        short_name: `L&R bröllop`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#ded4cd`,
