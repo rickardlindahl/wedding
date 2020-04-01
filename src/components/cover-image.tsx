@@ -20,7 +20,7 @@ const CoverImage: React.FC<CoverImageProps> = ({
       desktop: file(relativePath: { eq: "rickard-linnea.jpg" }) {
         childImageSharp {
           fluid(quality: 80, maxWidth: 1920) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
@@ -44,7 +44,9 @@ const CoverImage: React.FC<CoverImageProps> = ({
       <Img
         className="cover-image__image"
         fluid={data.desktop.childImageSharp.fluid}
+        critical
         loading="eager"
+        fadeIn={false}
         imgStyle={{ pointerEvents: "none" }}
       ></Img>
       <div className="cover-image__wedding-date">
