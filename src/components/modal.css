@@ -1,5 +1,8 @@
 body.modal-active {
   overflow: hidden;
+  touch-action: none;
+  -webkit-overflow-scrolling: none;
+  overscroll-behavior: none;
 }
 
 .md-modal {
@@ -7,6 +10,7 @@ body.modal-active {
   top: 0;
   left: 0;
   width: 100vw;
+  height: 100vh;
   z-index: 1001;
   visibility: hidden;
   backface-visibility: hidden;
@@ -30,16 +34,14 @@ body.modal-active {
 }
 
 .md-hamburger-container {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: static;
   z-index: 1001;
 }
 
 .md-content {
   display: flex;
+  height: 100vh;
   justify-content: center;
-  align-items: center;
 }
 
 .md-show ~ .md-overlay {
@@ -85,7 +87,7 @@ body.modal-active {
 }
 
 @media screen and (min-width: 768px) {
-  .md-hamburger-container {
-    position: static;
+  .md-content {
+    align-items: center;
   }
 }
