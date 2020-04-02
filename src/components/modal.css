@@ -36,6 +36,7 @@ body.modal-active {
 .md-hamburger-container {
   position: static;
   z-index: 1001;
+  user-select: none;
 }
 
 .md-content {
@@ -65,6 +66,7 @@ body.modal-active {
   padding: .25rem;
   text-align: center;
   font-size: 1.5rem;
+  user-select: none;
 }
 
 .md-content__link-wrapper a {
