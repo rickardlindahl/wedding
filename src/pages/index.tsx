@@ -57,8 +57,6 @@ const IndexPage: React.FC = () => {
     }
   }, [isMenuOpen])
 
-  const [isSticky, setIsSticky] = useState(false)
-
   const renderHamburger = () => (
     <Hamburger
       onToggle={() => {
@@ -84,14 +82,10 @@ const IndexPage: React.FC = () => {
       />
       <CoverImage
         scrollToUrl={createLinkFromId(blocks[0].id)}
-        onSentinelChange={inView => {
-          setIsSticky(!inView)
-        }}
       />
       <Header
         title={data.site.siteMetadata.title}
         renderHamburger={renderHamburger}
-        isSticky={isSticky}
       />
       <div>
         {blocks.map(({ id, default: Component }) => (

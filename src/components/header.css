@@ -1,4 +1,17 @@
 .header {
+  position: relative;
+}
+
+.header__sentinel {
+  background: transparent;
+  position: absolute;
+  top: -256px;
+  left: 0;
+  width: 100%;
+  height: 256px;
+}
+
+.header__container {
   width: 100%;
   height: 49px;
   background-color: white;
@@ -15,16 +28,17 @@
   font-size: 1.125rem;
 }
 
-.header__item--left, .header__item--right {
+.header__item--left,
+.header__item--right {
   flex: 1;
 }
 
-.header__sticky-wrapper {	
-  width: 100%;	
-  height: 49px;	
+.header__sticky-wrapper {
+  width: 100%;
+  height: 49px;
 }
 
-.header.is-sticky {
+.header__container.is-sticky {
   position: fixed;
   top: 0;
   left: 0;

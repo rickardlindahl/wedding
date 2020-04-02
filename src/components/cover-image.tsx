@@ -1,19 +1,15 @@
 import React, { useEffect } from "react"
-import { useInView } from "react-intersection-observer"
 import { useStaticQuery, graphql } from "gatsby"
-import Div100vh from "react-div-100vh"
 import Img from "gatsby-image"
 import ScrollDown from "./scroll-down"
 import "./cover-image.css"
 
 interface CoverImageProps {
   scrollToUrl: string
-  onSentinelChange(inView: boolean): void
 }
 
 const CoverImage: React.FC<CoverImageProps> = ({
   scrollToUrl,
-  onSentinelChange,
 }) => {
   const data = useStaticQuery(graphql`
     query {
@@ -27,20 +23,8 @@ const CoverImage: React.FC<CoverImageProps> = ({
     }
   `)
 
-  const [ref, inView, entry] = useInView({
-    threshold: 0,
-  })
-
-  useEffect(() => {
-    if (!entry) {
-      return
-    }
-
-    onSentinelChange(inView)
-  }, [inView, entry])
-
   return (
-    <Div100vh className="cover-image">
+    <div className="cover-image">
       <Img
         className="cover-image__image"
         fluid={data.desktop.childImageSharp.fluid}
@@ -55,8 +39,7 @@ const CoverImage: React.FC<CoverImageProps> = ({
         2020
       </div>
       <ScrollDown scrollToUrl={scrollToUrl} />
-      <div className="cover-image__sentinel" ref={ref} />
-    </Div100vh>
+    </div>
   )
 }
 
