@@ -26,6 +26,7 @@ const Ceremony: React.FC = () => {
       title={title}
     >
       <p>Dagen inleds med vigsel mellan brudparet.</p>
+      <p>Vigseln hålls utomhus vid bra väder.</p>
       <br />
       <p>14.00</p>
       <p>Baggböle Herrgård</p>
