@@ -28,12 +28,11 @@ const Friday: React.FC = () => {
     >
       <p>
         Vi vill umgås med er så mycket som möjligt under denna helg! Därför
-        träffas de som vill under fredagkväll på Scandic Plaza Umeå för drinkar
-        och härligt surr.
+        träffas de som vill under fredagkväll för drinkar och härligt surr.
       </p>
       <br />
       <p>20.00</p>
-      <p>Scandic Plaza Umeå</p>
+      <p>Vi återkommer med plats.</p>
       <br />
       <p>
         Anmäl om du vill delta till toastparet på <EmailLink />.
