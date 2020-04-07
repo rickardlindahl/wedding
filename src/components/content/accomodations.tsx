@@ -25,7 +25,8 @@ const Accomodations: React.FC = () => {
       imageData={data.placeholderImage.childImageSharp.fixed}
       title={title}
     >
-      <p>Information kommer snart.</p>
+      <p>Vi ser just nu över möjligheten till rabatterat boende på Scandic Plaza Umeå.</p>
+      <p>Mer information kommer snart.</p>
     </ContentBlock>
   )
 }
