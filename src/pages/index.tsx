@@ -27,9 +27,9 @@ const blocks = [
   CoverChargeAndGifts,
   Transportation,
   Accomodations,
-  RSVP,
   Friday,
   Sunday,
+  RSVP,
   Toasters,
   Timeline,
 ]
