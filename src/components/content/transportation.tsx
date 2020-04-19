@@ -27,24 +27,22 @@ const Transportation = () => {
       title={title}
     >
       <p>
-        Det finns möjlighet till busstransport mellan Scandic Plaza Umeå och
-        Baggböle Herrgård för de som önskar.
+        Det finns möjlighet till busstransport mellan Umeå och Baggböle Herrgård
+        för de som önskar. Anmäl plats till toastparet på <EmailLink />.
       </p>
       <br />
       <ul>
         <li>
-          <p>13.30 - Plaza &#8594; Baggböle Herrgård</p>
+          <p>13.30 - Umeå &#8594; Baggböle Herrgård</p>
         </li>
         <li>
-          <p>01.00 - Baggböle Herrgård &#8594; Plaza</p>
-        </li>
-        <li>
-          <p>03.15 - Baggböle Herrgård &#8594; Plaza</p>
+          <p>03.15 - Baggböle Herrgård &#8594; Umeå</p>
         </li>
       </ul>
       <br />
       <p>
-        Anmäl plats till toastparet på <EmailLink />.
+        Mer specifik hållplats i Umeå meddelas då vi bokat transport för de som
+        anmält sig. Håll utkik på hemsidan.
       </p>
     </ContentBlock>
   )
