@@ -1,8 +1,8 @@
-.header {
+.Header {
   position: relative;
 }
 
-.header__sentinel {
+.Header-sentinel {
   background: transparent;
   position: absolute;
   top: -256px;
@@ -11,34 +11,34 @@
   height: 256px;
 }
 
-.header__container {
+.Header-container {
   width: 100%;
   height: 49px;
   background-color: white;
 }
 
-.header__inner {
+.Header-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.header__title {
+.Header-title {
   font-family: Kiona, sans-serif;
   font-size: 1.125rem;
 }
 
-.header__item--left,
-.header__item--right {
+.Header-item--left,
+.Header-item--right {
   flex: 1;
 }
 
-.header__sticky-wrapper {
+.Header-stickyWrapper {
   width: 100%;
   height: 49px;
 }
 
-.header__container.is-sticky {
+.Header-container.is-sticky {
   position: fixed;
   top: 0;
   left: 0;
@@ -48,7 +48,7 @@
 }
 
 @media screen and (min-width: 1024px) {
-  .header__inner {
+  .Header-inner {
     max-width: 1024px;
     margin: 0 auto;
   }

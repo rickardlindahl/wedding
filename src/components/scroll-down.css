@@ -1,4 +1,4 @@
-.scroll-down__link {
+.ScrollDown-link {
   position: absolute;
   bottom: 88px;
   left: 50%;
@@ -8,11 +8,11 @@
   transition: opacity 0.3s;
 }
 
-.scroll-down__link:hover {
+.ScrollDown-link:hover {
   opacity: 0.5;
 }
 
-.scroll-down__span {
+.ScrollDown-span {
   position: absolute;
   top: 0;
   left: 50%;
@@ -41,12 +41,12 @@
 }
 
 @media screen and (min-width: 1024px) {
-  .scroll-down__link {
+  .ScrollDown-link {
     padding-top: 60px;
     bottom: 0;
   }
 
-  .scroll-down__span {
+  .ScrollDown-span {
     position: absolute;
     top: 0;
     left: 50%;
@@ -59,7 +59,7 @@
     transform: rotate(0);
   }
 
-  .scroll-down__span::before {
+  .ScrollDown-span::before {
     position: absolute;
     top: 10px;
     left: 50%;

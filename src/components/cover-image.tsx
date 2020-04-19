@@ -24,16 +24,16 @@ const CoverImage: React.FC<CoverImageProps> = ({
   `)
 
   return (
-    <div className="cover-image">
+    <div className="CoverImage">
       <Img
-        className="cover-image__image"
+        className="CoverImage-image"
         fluid={data.desktop.childImageSharp.fluid}
         critical
         loading="eager"
         fadeIn={false}
         imgStyle={{ pointerEvents: "none" }}
       ></Img>
-      <div className="cover-image__wedding-date">
+      <div className="CoverImage-weddingDate">
         08/08
         <br />
         2020

@@ -18,15 +18,15 @@ const Modal: React.FC<ModalProps> = ({
 }) => (
   <>
     <div
-      className={classNames("md-modal", "md-effect", {
-        "md-show": isVisible,
+      className={classNames("Modal-modal", "Modal-effect", {
+        "Modal-show": isVisible,
       })}
     >
-      <div className="md-content">
+      <div className="Modal-content">
         <div>
-          <div className="md-hamburger-container">{renderHamburger()}</div>
+          <div className="Modal-hamburgerContainer">{renderHamburger()}</div>
           {menuItems.map(({ to, title }) => (
-            <div className="md-content__link-wrapper" key={to}>
+            <div className="Modal-linkContainer" key={to}>
               <Link to={to} onClick={onItemClick}>
                 {title}
               </Link>
@@ -35,7 +35,7 @@ const Modal: React.FC<ModalProps> = ({
         </div>
       </div>
     </div>
-    <div className="md-overlay" />
+    <div className="Modal-overlay" />
   </>
 )
 

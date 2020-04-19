@@ -3,7 +3,7 @@ import EmailLink from "./email-link"
 import "./footer.css"
 
 const Footer: React.FC = () => (
-  <footer className="footer">
+  <footer className="Footer">
     <EmailLink />
   </footer>
 )

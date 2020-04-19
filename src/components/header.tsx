@@ -24,20 +24,26 @@ const Header: React.FC<HeaderProps> = ({ title, renderHamburger }) => {
   }, [inView, entry])
 
   return (
-    <div className="header">
-      <div className="header__sentinel" ref={ref} />
-      <div className={classNames({ "header__sticky-wrapper": isSticky })} />
+    <div className="Header">
+      <div className="Header-ssentinel" ref={ref} />
+      <div className={classNames({ "Header-stickyWrapper": isSticky })} />
       <div
-        className={classNames("header__container", { "is-sticky": isSticky })}
+        className={classNames("Header-container", { "is-sticky": isSticky })}
       >
-        <div className="header__inner">
-          <div className="header__item header__item--left">
+        <div className="Header-inner">
+          <div className={classNames("Header-item", "Header-item--left")}>
             {renderHamburger()}
           </div>
-          <div className="header__item header__item--center header__title">
+          <div
+            className={classNames(
+              "Header-item",
+              "Header-item--center",
+              "Header-title"
+            )}
+          >
             {title}
           </div>
-          <div className="header__item header__item--right" />
+          <div className={classNames("Header-item", "Header-item--right")} />
         </div>
       </div>
     </div>

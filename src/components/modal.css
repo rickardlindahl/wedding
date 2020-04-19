@@ -5,7 +5,7 @@ body.modal-active {
   overscroll-behavior: none;
 }
 
-.md-modal {
+.Modal-modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -16,11 +16,11 @@ body.modal-active {
   backface-visibility: hidden;
 }
 
-.md-show {
+.Modal-show {
   visibility: visible;
 }
 
-.md-overlay {
+.Modal-overlay {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -33,35 +33,35 @@ body.modal-active {
   transition: all .3s;
 }
 
-.md-hamburger-container {
+.Modal-hamburgerContainer {
   position: static;
   z-index: 1001;
   user-select: none;
 }
 
-.md-content {
+.Modal-content {
   display: flex;
   height: 100vh;
   justify-content: center;
 }
 
-.md-show ~ .md-overlay {
+.Modal-show ~ .Modal-overlay {
   opacity: 1;
   visibility: visible;
 }
 
-.md-effect .md-content {
+.Modal-effect .Modal-content {
   transform: scale(.8);
   opacity: 0;
   transition: all .3s;
 }
 
-.md-show.md-effect .md-content {
+.Modal-show.Modal-effect .Modal-content {
   transform: scale(1);
   opacity: 1;
 }
 
-.md-content__link-wrapper {
+.Modal-linkContainer {
   font-family: Kiona, sans-serif;
   padding: .25rem;
   text-align: center;
@@ -69,7 +69,7 @@ body.modal-active {
   user-select: none;
 }
 
-.md-content__link-wrapper a {
+.Modal-linkContainer a {
   display: inline-block;
   line-height: 2rem;
   text-decoration: none;
@@ -78,18 +78,18 @@ body.modal-active {
   transition: transform .2s ease;
 }
 
-.md-content__link-wrapper a:hover {
+.Modal-linkContainer a:hover {
   transform: scale(1.1);
 }
 
 @media screen and (min-height: 624px) {
-  .md-content__link-wrapper {
+  .Modal-linkContainer {
     padding: .5rem;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .md-content {
+  .Modal-content {
     align-items: center;
   }
 }
