@@ -25,7 +25,7 @@ const Header: React.FC<HeaderProps> = ({ title, renderHamburger }) => {
 
   return (
     <div className="Header">
-      <div className="Header-ssentinel" ref={ref} />
+      <div className="Header-sentinel" ref={ref} />
       <div className={classNames({ "Header-stickyWrapper": isSticky })} />
       <div
         className={classNames("Header-container", { "is-sticky": isSticky })}
