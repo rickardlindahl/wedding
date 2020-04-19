@@ -26,8 +26,11 @@ const Timeline: React.FC = () => {
       imageData={data.placeholderImage.childImageSharp.fixed}
       title={title}
     >
-      <div className="Timeline">
-        <p>Schemat är preliminärt och kan ändras.</p>
+      <div>
+        <p>
+          Tiderna är preliminära och kan ändras. Håll koll på hemsidan för
+          uppdateringar.
+        </p>
         <br />
         <ul>
           <li className="Timeline-listitem">
@@ -53,14 +56,21 @@ const Timeline: React.FC = () => {
           </li>
           <li className="Timeline-listitem">
             <p>
-              18.00
+              17.00
               <br />
-              Bröllopsfesten inleds med att middagen serveras
+              Bröllopsfesten inleds
             </p>
           </li>
           <li className="Timeline-listitem">
             <p>
-              22.30
+              18.00
+              <br />
+              Middagen serveras
+            </p>
+          </li>
+          <li className="Timeline-listitem">
+            <p>
+              22.00
               <br />
               Brudvals &amp; dans in på småtimmarna
             </p>
