@@ -28,10 +28,10 @@ const Friday: React.FC = () => {
     >
       <p>
         Vi vill umgås med er så mycket som möjligt under denna helg! Därför
-        träffas de som vill under fredagkväll för drinkar och härligt surr.
+        träffas de som vill fredagkväll för drinkar och härligt surr.
       </p>
       <br />
-      <p>20.00</p>
+      <p>20.00 - 23.00</p>
       <p>Vi återkommer med plats.</p>
       <br />
       <p>
