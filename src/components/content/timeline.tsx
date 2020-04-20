@@ -79,7 +79,7 @@ const Timeline: React.FC = () => {
             <p>
               01.00
               <br />
-              Vicking
+              Vickning
             </p>
           </li>
           <li className="Timeline-listitem">
