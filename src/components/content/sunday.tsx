@@ -10,7 +10,7 @@ export const title = "Söndag 9/8"
 const Sunday: React.FC = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "bottle-square.jpg" }) {
+      placeholderImage: file(relativePath: { eq: "hotel-square.jpg" }) {
         childImageSharp {
           fixed(width: 300, height: 300) {
             ...GatsbyImageSharpFixed
