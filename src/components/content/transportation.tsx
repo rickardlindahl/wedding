@@ -28,8 +28,9 @@ const Transportation = () => {
     >
       <p>
         Det finns möjlighet till busstransport mellan Umeå och Baggböle Herrgård
-        för de som önskar. Anmäl plats till toastparet på <EmailLink />.
+        för de som önskar.
       </p>
+      <p>Anmäl plats till toastparet på <EmailLink />.</p>
       <br />
       <ul>
         <li>
