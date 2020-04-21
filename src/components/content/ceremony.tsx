@@ -25,7 +25,7 @@ const Ceremony: React.FC = () => {
       imageData={data.placeholderImage.childImageSharp.fixed}
       title={title}
     >
-      <p>Dagen inleds med vigsel mellan brudparet.</p>
+      <p>Dagen inleds med vigselceremoni mellan brudparet.</p>
       <p>Vigseln hålls utomhus vid bra väder.</p>
       <br />
       <p>14.00</p>
