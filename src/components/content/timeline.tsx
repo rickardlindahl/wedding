@@ -35,6 +35,13 @@ const Timeline: React.FC = () => {
         <ul>
           <li className="Timeline-listitem">
             <p>
+              13.30
+              <br />
+              Buss till Baggböle Herrgård för de som anmält plats
+            </p>
+          </li>
+          <li className="Timeline-listitem">
+            <p>
               14.00
               <br />
               Samling på Baggböle Herrgård för aktiviteter &amp; fördrink
@@ -86,7 +93,7 @@ const Timeline: React.FC = () => {
             <p>
               03.15
               <br />
-              Buss hem för de som anmält sig
+              Buss hem för de som anmält plats
             </p>
           </li>
         </ul>
