@@ -28,7 +28,7 @@ const Sunday: React.FC = () => {
     >
       <p>
         Vi vill umgås med er så mycket som möjligt under denna helg! Därför
-        träffas de som vill och kan och äter lunch tillsammans.
+        träffas de som vill och kan och äter lunch tillsammans på söndagen.
       </p>
       <br />
       <p>Vi återkommer med tid och plats.</p>
