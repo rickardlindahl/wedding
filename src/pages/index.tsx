@@ -18,6 +18,7 @@ import * as Sunday from "../components/content/sunday"
 import Modal from "../components/modal"
 import Hamburger from "../components/hamburger"
 import Footer from "../components/footer"
+import CoronaInfo from "../components/corona-info"
 
 const blocks = [
   Ceremony,
@@ -80,13 +81,12 @@ const IndexPage: React.FC = () => {
           title,
         }))}
       />
-      <CoverImage
-        scrollToUrl={createLinkFromId(blocks[0].id)}
-      />
+      <CoverImage scrollToUrl="#corona" />
       <Header
         title={data.site.siteMetadata.title}
         renderHamburger={renderHamburger}
       />
+      <CoronaInfo />
       <div>
         {blocks.map(({ id, default: Component }) => (
           <Component key={id} />

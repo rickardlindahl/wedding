@@ -1,0 +1,24 @@
+.CoronaInfo {
+  background-color: rgb(222, 212, 203);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.CoronaInfo-title {
+  font-family: Kiona, sans-serif;
+  font-size: 2rem;
+}
+
+.CoronaInfo-separator {
+  background: black;
+  width: 4rem;
+  height: 1px;
+  margin: 2rem auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .CoronaInfo-inner {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+}
