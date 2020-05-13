@@ -14,7 +14,7 @@ const CoronaInfo: React.FC = () => (
       <br />
       <p>
         Om restriktionerna gällande sammankomster med över 50 personer inte har
-        lättats upp till 14 juli, kommer bröllopet flyttas fram till lördag 19
+        lättats upp till 15 juli, kommer bröllopet flyttas fram till lördag 19
         september.
       </p>
       <br />
