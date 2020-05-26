@@ -6,6 +6,13 @@ const CoronaInfo: React.FC = () => (
     <div className="CoronaInfo-inner">
       <h2 className="CoronaInfo-title">Viktig information gällande covid-19</h2>
       <div className="CoronaInfo-separator" />
+      <p className="CoronaInfo-important">
+        Folkhälsomyndigheten har informerat att uppdaterade restriktioner inför
+        sommaren kommer den 3 juni.
+        <br />
+        Vi förlänger därför O.S.A. till dess att de har uppdaterats.
+      </p>
+      <br />
       <p>
         Vår avsikt och förhoppning är att genomföra bröllopet som planerat. Vi
         ser fram emot att få träffa er alla och dela denna dag, som vi längtat

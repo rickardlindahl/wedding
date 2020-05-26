@@ -16,6 +16,10 @@
   margin: 2rem auto;
 }
 
+.CoronaInfo-important {
+  font-weight: 700;
+}
+
 @media screen and (min-width: 1024px) {
   .CoronaInfo-inner {
     max-width: 1024px;
