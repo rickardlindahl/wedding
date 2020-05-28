@@ -19,14 +19,33 @@ const Accomodations: React.FC = () => {
     }
   `)
 
+  const reservationEmail = "mailto:reservationumea@scandichotels.com"
+
   return (
     <ContentBlock
       id={id}
       imageData={data.placeholderImage.childImageSharp.fixed}
       title={title}
     >
-      <p>Vi ser just nu över möjligheten till rabatterat boende på Scandic Plaza Umeå.</p>
-      <p>Mer information kommer snart.</p>
+      <p>
+        Vi har möjlighet att erbjuda rabatterat boende på Scandic Plaza Umeå
+        från den 6/8 - 9/8!
+      </p>
+      <br />
+      <p>Pris: 650 kr / natt.</p>
+      <p>(detta gäller både enkel- och dubbelrum)</p>
+      <br />
+      <p>Önskar du boka rum till detta pris uppge koden:</p>
+      <p className="ContentBlock-bold-text">LIN060820</p>
+      <br />
+      <p>
+        Bokning sker <span className="ContentBlock-italic-text">endast</span>{" "}
+        via telefon eller mail.
+      </p>
+      <p>Telefon: 090-2056310</p>
+      <p>
+        Mail: <a href={reservationEmail}>{reservationEmail}</a>
+      </p>
     </ContentBlock>
   )
 }

@@ -36,6 +36,14 @@
   margin: 2rem auto;
 }
 
+.ContentBlock-bold-text {
+  font-weight: 700;
+}
+
+.ContentBlock-italic-text {
+  font-style: italic;
+}
+
 @media screen and (min-width: 768px) {
   .ContentBlock-inner {
     flex-direction: row;
