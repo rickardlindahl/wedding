@@ -19,7 +19,7 @@ const Accomodations: React.FC = () => {
     }
   `)
 
-  const reservationEmail = "mailto:reservationumea@scandichotels.com"
+  const reservationEmail = "reservationumea@scandichotels.com"
 
   return (
     <ContentBlock
@@ -44,7 +44,7 @@ const Accomodations: React.FC = () => {
       </p>
       <p>Telefon: 090-2056310</p>
       <p>
-        Mail: <a href={reservationEmail}>{reservationEmail}</a>
+        Mail: <a href={`mailto:${reservationEmail}`}>{reservationEmail}</a>
       </p>
     </ContentBlock>
   )
