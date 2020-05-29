@@ -13,7 +13,7 @@ const EmailLink: React.FC = () => {
   `)
 
   return (
-    <a href={`mailto:${data.site.siteMetadata.email}}`}>
+    <a href={`mailto:${data.site.siteMetadata.email}`}>
       {data.site.siteMetadata.email}
     </a>
   )
