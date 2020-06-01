@@ -19,6 +19,8 @@ import Modal from "../components/modal"
 import Hamburger from "../components/hamburger"
 import Footer from "../components/footer"
 import CoronaInfo from "../components/corona-info"
+import Checklist from "../components/checklist"
+import { createLinkFromId } from "../lib/link"
 
 const blocks = [
   Ceremony,
@@ -34,8 +36,6 @@ const blocks = [
   Toasters,
   Timeline,
 ]
-
-const createLinkFromId = (id: string) => `/#${id}`
 
 const IndexPage: React.FC = () => {
   const data = useStaticQuery(graphql`
@@ -87,6 +87,7 @@ const IndexPage: React.FC = () => {
         renderHamburger={renderHamburger}
       />
       <CoronaInfo />
+      <Checklist />
       <div>
         {blocks.map(({ id, default: Component }) => (
           <Component key={id} />

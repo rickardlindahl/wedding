@@ -1,0 +1,52 @@
+.Checklist {
+  background-color: rgba(222, 212, 203, .5);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.Checklist-title {
+  font-family: Kiona, sans-serif;
+  font-size: 2rem;
+}
+
+.Checklist-separator {
+  background: black;
+  width: 4rem;
+  height: 1px;
+  margin: 2rem auto;
+}
+
+.Checklist-list-container {
+  display: flex;
+  justify-content: center;
+}
+
+.Checklist-list {
+  min-width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.Checklist-list--ordered {
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+
+.Checklist-list--unordered {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.Checklist-list-item {
+  font-size: 1.25rem;
+  text-align: left;
+  padding: .5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .Checklist-inner {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+}

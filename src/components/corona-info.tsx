@@ -29,7 +29,7 @@ const CoronaInfo: React.FC = () => (
         Om restriktionerna gällande sammankomster med över 50 personer inte har
         lättats upp till 25 augusti, kommer bröllopet flyttas fram till år 2021.
         Vi återkommer i sådana fall med information om dag, plats samt
-        kuvertavgiften längre fram.
+        återbetalning av kuvertavgiften längre fram.
       </p>
     </div>
     <div className="CoronaInfo-separator" />
