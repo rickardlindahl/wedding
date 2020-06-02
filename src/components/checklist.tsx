@@ -8,17 +8,8 @@ import EmailLink from "./email-link"
 import "./checklist.css"
 import { create } from "domain"
 
-const renderListItem = (
-  children: React.ReactNode,
-  isNested: boolean = false
-) => (
-  <li
-    className={classNames("Checklist-list-item", {
-      "Checklist-list-item-nested": isNested,
-    })}
-  >
-    {children}
-  </li>
+const renderListItem = (children: React.ReactNode) => (
+  <li className="Checklist-list-item">{children}</li>
 )
 
 const Checklist: React.FC = () => (
