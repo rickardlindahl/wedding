@@ -46,6 +46,8 @@ const Accomodations: React.FC = () => {
       <p>
         Mail: <a href={`mailto:${reservationEmail}`}>{reservationEmail}</a>
       </p>
+      <br />
+      <p>Rummen är avbokningsbara fram till ankomstdagen.</p>
     </ContentBlock>
   )
 }
