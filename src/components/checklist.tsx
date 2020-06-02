@@ -5,8 +5,8 @@ import { createLinkFromId } from "../lib/link"
 import { id as accomodationsId } from "./content/accomodations"
 import { id as coverChargeId } from "./content/cover-charge-and-gifts"
 import EmailLink from "./email-link"
+import Separator from "./separator"
 import "./checklist.css"
-import { create } from "domain"
 
 const renderListItem = (children: React.ReactNode) => (
   <li className="Checklist-list-item">{children}</li>
@@ -16,7 +16,7 @@ const Checklist: React.FC = () => (
   <div id="checklist" className="Checklist">
     <div className="Checklist-inner">
       <h2 className="Checklist-title">Checklista inför bröllopet</h2>
-      <div className="Checklist-separator" />
+      <Separator />
       <p>Vill du dela denna dag med oss?</p>
       <br />
       <p>Kom ihåg att:</p>
@@ -56,7 +56,7 @@ const Checklist: React.FC = () => (
         </ol>
       </div>
     </div>
-    <div className="Checklist-separator" />
+    <Separator />
   </div>
 )
 

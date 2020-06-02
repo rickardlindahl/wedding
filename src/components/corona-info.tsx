@@ -1,11 +1,12 @@
 import React from "react"
+import Separator from "./separator"
 import "./corona-info.css"
 
 const CoronaInfo: React.FC = () => (
   <div id="corona" className="CoronaInfo">
     <div className="CoronaInfo-inner">
       <h2 className="CoronaInfo-title">Viktig information gällande covid-19</h2>
-      <div className="CoronaInfo-separator" />
+      <Separator />
       <p className="CoronaInfo-important">
         Folkhälsomyndigheten har informerat att uppdaterade restriktioner inför
         sommaren kommer den 3 juni.
@@ -32,7 +33,7 @@ const CoronaInfo: React.FC = () => (
         återbetalning av kuvertavgiften längre fram.
       </p>
     </div>
-    <div className="CoronaInfo-separator" />
+    <Separator />
   </div>
 )
 

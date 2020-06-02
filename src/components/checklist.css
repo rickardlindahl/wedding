@@ -9,13 +9,6 @@
   font-size: 2rem;
 }
 
-.Checklist-separator {
-  background: black;
-  width: 4rem;
-  height: 1px;
-  margin: 2rem auto;
-}
-
 .Checklist-list-container {
   display: flex;
   justify-content: center;

@@ -1,5 +1,6 @@
 import React from "react"
 import Img, { FixedObject } from "gatsby-image"
+import Separator from "./separator"
 import "./content-block.css"
 
 interface ContentBlockProps {
@@ -24,7 +25,7 @@ const ContentBlock: React.FC<ContentBlockProps> = ({
       </div>
       <div className="ContentBlock-textContainer">
         <h2 className="ContentBlock-title">{title}</h2>
-        <div className="ContentBlock-separator" />
+        <Separator />
         {children}
       </div>
     </div>
