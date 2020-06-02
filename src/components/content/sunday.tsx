@@ -33,7 +33,13 @@ const Sunday: React.FC = () => {
       <br />
       <p>12.00 - 14.30</p>
       <p>Scandic Plaza Umeå</p>
-      <p>Pris: 149 kr / person (exkl. dryck)</p>
+      <br />
+      <p>
+        Buffé: Ångad laxfilé med tomat, fänkål och saffranssås, aioli och kokt
+        potatis. Serveras med sallad, bröd, smör och bordsvatten.
+      </p>
+      <p>Pris: 149 kr / person</p>
+      <p>Kaffe/te: 27 kr / person</p>
       <br />
       <p>Tiden är preliminär tills vi vet hur många vi blir.</p>
       <br />
