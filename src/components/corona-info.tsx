@@ -33,7 +33,6 @@ const CoronaInfo: React.FC = () => (
         återbetalning av kuvertavgiften längre fram.
       </p>
     </div>
-    <Separator />
   </div>
 )
 

@@ -56,7 +56,6 @@ const Checklist: React.FC = () => (
         </ol>
       </div>
     </div>
-    <Separator />
   </div>
 )
 
