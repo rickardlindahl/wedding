@@ -18,7 +18,7 @@ import * as Sunday from "../components/content/sunday"
 import Modal from "../components/modal"
 import Hamburger from "../components/hamburger"
 import Footer from "../components/footer"
-import CoronaInfo from "../components/corona-info"
+import Info from "../components/info"
 import Checklist from "../components/checklist"
 import { createLinkFromId } from "../lib/link"
 
@@ -81,12 +81,12 @@ const IndexPage: React.FC = () => {
           title,
         }))}
       />
-      <CoverImage scrollToUrl="#corona" />
+      <CoverImage scrollToUrl="#info" />
       <Header
         title={data.site.siteMetadata.title}
         renderHamburger={renderHamburger}
       />
-      <CoronaInfo />
+      <Info />
       <Checklist />
       <div>
         {blocks.map(({ id, default: Component }) => (

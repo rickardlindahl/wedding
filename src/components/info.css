@@ -1,20 +1,20 @@
-.CoronaInfo {
+.Info {
   background-color: rgb(222, 212, 203);
   padding: 4rem 2rem;
   text-align: center;
 }
 
-.CoronaInfo-title {
+.Info-title {
   font-family: Kiona, sans-serif;
   font-size: 2rem;
 }
 
-.CoronaInfo-important {
-  font-weight: 700;
+.Info-small {
+  font-size: .875rem;
 }
 
 @media screen and (min-width: 1024px) {
-  .CoronaInfo-inner {
+  .Info-inner {
     max-width: 1024px;
     margin: 0 auto;
   }
