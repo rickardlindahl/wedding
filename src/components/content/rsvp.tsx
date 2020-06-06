@@ -25,8 +25,7 @@ const RSVP: React.FC = () => {
       imageData={data.placeholderImage.childImageSharp.fixed}
       title={title}
     >
-      <p>Meddela senast den 31.05.2020 om du vill dela dagen med oss.</p>
-      <p>Anmälan sker genom att betala in kuvertavgiften.</p>
+      <p>Tack för era anmälningar!</p>
     </ContentBlock>
   )
 }
