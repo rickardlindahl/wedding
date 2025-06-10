@@ -77,7 +77,7 @@ const IndexPage: React.FC = () => {
           <Component key={id} />
         ))}
       </div>
-      <Footer />>
+      <Footer />
     </>
   )
 }
