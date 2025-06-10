@@ -7,32 +7,18 @@ import * as Ceremony from "../components/content/ceremony"
 import * as Party from "../components/content/party"
 import * as SpeechAndSpex from "../components/content/speech-and-spex"
 import * as Food from "../components/content/food"
-import * as CoverChargeAndGifts from "../components/content/cover-charge-and-gifts"
-import * as Transportation from "../components/content/transportation"
-import * as Accomodations from "../components/content/accomodations"
-import * as RSVP from "../components/content/rsvp"
 import * as Timeline from "../components/content/timeline"
 import * as Toasters from "../components/content/toasters"
-import * as Friday from "../components/content/friday"
-import * as Sunday from "../components/content/sunday"
 import Modal from "../components/modal"
 import Hamburger from "../components/hamburger"
 import Footer from "../components/footer"
-import Info from "../components/info"
-import Checklist from "../components/checklist"
 import { createLinkFromId } from "../lib/link"
 
 const blocks = [
   Ceremony,
-  Party,
-  SpeechAndSpex,
   Food,
-  CoverChargeAndGifts,
-  Transportation,
-  Accomodations,
-  Friday,
-  Sunday,
-  RSVP,
+  SpeechAndSpex,
+  Party,
   Toasters,
   Timeline,
 ]
@@ -86,8 +72,6 @@ const IndexPage: React.FC = () => {
         title={data.site.siteMetadata.title}
         renderHamburger={renderHamburger}
       />
-      <Info />
-      <Checklist />
       <div>
         {blocks.map(({ id, default: Component }) => (
           <Component key={id} />

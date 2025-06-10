@@ -4,7 +4,7 @@ import ContentBlock from "../content-block"
 
 export const id = "ceremony"
 
-export const title = "Vigsel"
+export const title = "Ceremoni"
 
 const Ceremony: React.FC = () => {
   const data = useStaticQuery(graphql`
@@ -25,14 +25,8 @@ const Ceremony: React.FC = () => {
       imageData={data.placeholderImage.childImageSharp.fixed}
       title={title}
     >
-      <p>Dagen inleds med vigselceremoni mellan brudparet.</p>
-      <p>Vigseln hålls utomhus vid bra väder.</p>
-      <br />
-      <p>14.00</p>
-      <p>Baggböle Herrgård</p>
-      <p>905 92, Umeå</p>
-      <br />
-      <p>Era barn är varmt välkomna till vigselceremonin.</p>
+      <p>Vi träffas klockan 16:00 på Druidgårdens innergård för härligt mingel och tilltugg.</p>
+      <p>Där hålls en kortare ceremoni innan vi fortsätter firandet inomhus.</p>
     </ContentBlock>
   )
 }

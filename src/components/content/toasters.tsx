@@ -27,13 +27,12 @@ const Toasters: React.FC = () => {
       title={title}
     >
       <p>
-        Toastmadame: Cecilia Hultstrand Ahlin.
+        Toastmadame: Cecilia Hultstrand
         <br />
-        Toastmaster: Mikael Nygren.
+        Toastmaster: Mikael Nordmark
         <br />
         <br />
-        Specialkost, tal, spex, transport samt deltagande vid fredagens och
-        söndagens aktiviteter anmäls till toastparet på <EmailLink />.
+        Tal, spex eller annat påhitt anmäls till toastparet på <EmailLink />.
         <br />
         <br />
         Till toastparet kan du även vända dig om du har några frågor eller

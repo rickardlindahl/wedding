@@ -10,7 +10,7 @@ const Party: React.FC = () => {
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(
-        relativePath: { eq: "baggbole-herrgard-square.jpg" }
+        relativePath: { eq: "all-night-wedding-dance.jpg" }
       ) {
         childImageSharp {
           fixed(width: 300, height: 300) {
@@ -27,12 +27,8 @@ const Party: React.FC = () => {
       imageData={data.placeholderImage.childImageSharp.fixed}
       title={title}
     >
-      <p>17.00 - 03.00</p>
-      <p>Baggböle Herrgård</p>
-      <br />
-      <p>
-        Vi älskar era barn men under bröllopsfesten älskar vi era barnvakter.
-      </p>
+      <p>21.00</p>
+      <p>Slipsen åker på huvudet och klackskorna tas av. Vi dansar och sjunger till småtimmarna.</p>
     </ContentBlock>
   )
 }

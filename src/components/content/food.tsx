@@ -5,7 +5,7 @@ import EmailLink from "../email-link"
 
 export const id = "food"
 
-export const title = "Mat"
+export const title = "Middag"
 
 const Food: React.FC = () => {
   const data = useStaticQuery(graphql`
@@ -27,12 +27,7 @@ const Food: React.FC = () => {
       title={title}
     >
       <p>
-        Det kommer serveras tilltugg, mat och dryck löpande under dagen och
-        natten.
-      </p>
-      <br />
-      <p>
-        All specialkost meddelas till toastparet på <EmailLink />.
+        Runt kl 18:00 äter vi middag tillsammans.
       </p>
     </ContentBlock>
   )

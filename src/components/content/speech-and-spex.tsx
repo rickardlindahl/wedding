@@ -26,11 +26,9 @@ const SpeechAndSpex: React.FC = () => {
       imageData={data.placeholderImage.childImageSharp.fixed}
       title={title}
     >
-      <p>Vill du göra något särskilt för brudparet under bröllopsfesten?</p>
+      <p>Alla tal, uppträdanden, sånger och liknande uppmuntras och önskas!</p>
       <br />
-      <p>
-        Alla tal och spex meddelas till toastparet på <EmailLink />.
-      </p>
+      <p>Vill du göra något särskilt under bröllopsfesten meddela toastparet på <EmailLink /></p>
       <br />
       <p>
         Toastparet har även koll på lokal, logistik och tekniska

@@ -34,9 +34,9 @@ const CoverImage: React.FC<CoverImageProps> = ({
         imgStyle={{ pointerEvents: "none" }}
       ></Img>
       <div className="CoverImage-weddingDate">
-        08/08
+        09/08
         <br />
-        2020
+        2025
       </div>
       <ScrollDown scrollToUrl={scrollToUrl} />
     </div>
