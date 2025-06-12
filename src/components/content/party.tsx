@@ -4,7 +4,7 @@ import ContentBlock from "../content-block"
 
 export const id = "party"
 
-export const title = "Bröllopsfest"
+export const title = "Fest och firande"
 
 const Party: React.FC = () => {
   const data = useStaticQuery(graphql`
@@ -28,7 +28,8 @@ const Party: React.FC = () => {
       title={title}
     >
       <p>21.00</p>
-      <p>Slipsen åker på huvudet och klackskorna tas av. Vi dansar och sjunger till småtimmarna.</p>
+      <p>Baren är välfylld och vi dansar och sjunger fram till småtimmarna.</p>
+      <p>Festen drar igång på riktigt och vi dansar in på småtimmarna.</p>
     </ContentBlock>
   )
 }

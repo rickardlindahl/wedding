@@ -28,7 +28,7 @@ const SpeechAndSpex: React.FC = () => {
     >
       <p>Alla tal, uppträdanden, sånger och liknande uppmuntras och önskas!</p>
       <br />
-      <p>Vill du göra något särskilt under bröllopsfesten meddela toastparet på <EmailLink /></p>
+      <p>Vill du göra något särskilt under bröllopsfesten? Meddela i så fall vårt fantastiska toastpar på <EmailLink /></p>
       <br />
       <p>
         Toastparet har även koll på lokal, logistik och tekniska

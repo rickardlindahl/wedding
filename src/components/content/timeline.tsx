@@ -5,7 +5,7 @@ import "./timeline.css"
 
 export const id = "timeline"
 
-export const title = "Schema"
+export const title = "Tider"
 
 const Timeline: React.FC = () => {
   const data = useStaticQuery(graphql`
@@ -50,7 +50,7 @@ const Timeline: React.FC = () => {
             <p>
               21.00
               <br />
-              Festen drar igång på riktigt och vi dansar in på småtimmarna
+              Fest, dans, hopp och lek
             </p>
           </li>
           <li className="Timeline-listitem">
@@ -58,6 +58,12 @@ const Timeline: React.FC = () => {
               01.00
               <br />
               Vickning
+            </p>
+          </li>
+          <li className="Timeline-listitem">
+            <p>Hemgång
+              <br />
+              När du vill, men stanna gärna för en extra dans om du kan.
             </p>
           </li>
         </ul>

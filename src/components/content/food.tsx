@@ -26,9 +26,8 @@ const Food: React.FC = () => {
       imageData={data.placeholderImage.childImageSharp.fixed}
       title={title}
     >
-      <p>
-        Runt kl 18:00 äter vi middag tillsammans.
-      </p>
+      <p>Runt kl 18:00 äter vi middag tillsammans.</p>
+      <p>Förutom god mat och dryck utlovas en hel del gapskratt, tårar och överraskningar under sittningen.</p>
     </ContentBlock>
   )
 }
