@@ -67,7 +67,7 @@ const IndexPage: React.FC = () => {
           title,
         }))}
       />
-      <CoverImage scrollToUrl="#info" />
+      <CoverImage scrollToUrl="#ceremony" />
       <Header
         title={data.site.siteMetadata.title}
         renderHamburger={renderHamburger}

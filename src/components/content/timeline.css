@@ -1,3 +1,7 @@
 .Timeline-listitem {
   margin-bottom: 2rem;
 }
+
+.Timeline-listitem-italic {
+  font-style: italic;
+}

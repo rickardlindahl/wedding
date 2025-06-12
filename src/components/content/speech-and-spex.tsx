@@ -26,7 +26,7 @@ const SpeechAndSpex: React.FC = () => {
       imageData={data.placeholderImage.childImageSharp.fixed}
       title={title}
     >
-      <p>Alla tal, uppträdanden, sånger och liknande uppmuntras och önskas!</p>
+      <p>Alla tal, uppträdanden, påhitt, sånger och liknande uppmuntras och önskas!</p>
       <br />
       <p>Vill du göra något särskilt under bröllopsfesten? Meddela i så fall vårt fantastiska toastpar på <EmailLink /></p>
       <br />

@@ -27,7 +27,8 @@ const Food: React.FC = () => {
       title={title}
     >
       <p>Runt kl 18:00 äter vi middag tillsammans.</p>
-      <p>Förutom god mat och dryck utlovas en hel del gapskratt, tårar och överraskningar under sittningen.</p>
+      <p>Det blir en sittning med mat för magen och skratt för själen.</p>
+      <p>Förbered er på lekar, spex, tal och kanske en och annan överraskning.</p>
     </ContentBlock>
   )
 }

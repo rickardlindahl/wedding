@@ -25,8 +25,8 @@ const Ceremony: React.FC = () => {
       imageData={data.placeholderImage.childImageSharp.fixed}
       title={title}
     >
-      <p>Vi träffas klockan 16:00 på Druidgårdens innergård för härligt mingel och tilltugg.</p>
-      <p>Där hålls en kortare ceremoni innan vi fortsätter firandet inomhus.</p>
+      <p>Vi träffas klockan 16:00 på Druidgårdens innergård för härligt mingel och tilltugg. Njut av stämningen och hälsa på alla nya och gamla vänner.</p>
+      <p>Efter minglet hålls en kortare ceremoni innan vi fortsätter firandet inomhus.</p>
     </ContentBlock>
   )
 }

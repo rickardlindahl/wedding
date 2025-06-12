@@ -8,11 +8,13 @@ export const id = "timeline"
 export const title = "Tider"
 
 const Timeline: React.FC = () => {
+  // Help me change the object position to be centered
+  // and make the image a bit larger
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "brollopsbild.jpg" }) {
         childImageSharp {
-          fixed(width: 300, height: 300) {
+          fixed(width: 300, height: 300, cropFocus: WEST) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -27,10 +29,6 @@ const Timeline: React.FC = () => {
       title={title}
     >
       <div>
-        <p>
-          Tiderna är preliminära och kan ändras. Håll koll på hemsidan för eventuella uppdateringar.
-        </p>
-        <br />
         <ul>
           <li className="Timeline-listitem">
             <p>
@@ -40,8 +38,11 @@ const Timeline: React.FC = () => {
             </p>
           </li>
           <li className="Timeline-listitem">
-            <p>
-              18.00
+            <p className="Timeline-listitem-italic">
+              Tiderna efter minglet är ungefärliga.
+            </p>
+            <br />
+            <p>18.00
               <br />
               Middagen serveras
             </p>

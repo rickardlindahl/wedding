@@ -28,8 +28,8 @@ const Party: React.FC = () => {
       title={title}
     >
       <p>21.00</p>
+      <p>Musiken höjs, slipsarna åker på huvudet och klackarna åker av fötterna.</p>
       <p>Baren är välfylld och vi dansar och sjunger fram till småtimmarna.</p>
-      <p>Festen drar igång på riktigt och vi dansar in på småtimmarna.</p>
     </ContentBlock>
   )
 }
