@@ -55,7 +55,7 @@ const IndexPage: React.FC = () => {
 
   return (
     <>
-      <SEO title="Bröllop 8/8 2020" />
+      <SEO title="Bröllopsfest 9/8 2025" />
       <Modal
         isVisible={isMenuOpen}
         onItemClick={() => {

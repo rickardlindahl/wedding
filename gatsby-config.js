@@ -3,7 +3,7 @@ module.exports = {
   siteMetadata: {
     title: "Linnéa & Rickard",
     description:
-      "Linnéa & Rickards bröllop 8/8 2020. Här hittar du all information om vigselceremonin, bröllopsfesten, mat, tal, transport, boende, m.m.",
+      "Linnéa & Rickards bröllopsfest 9/8 2025. Här hittar du all information om ceremonin, bröllopsfesten, mat, tal, m.m.",
     author: "@rickardlindahl",
     email: "linneaochrickard@gmail.com",
     url: "https://wedding.rickardlindahl.com",
