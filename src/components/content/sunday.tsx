@@ -37,7 +37,7 @@ const Sunday: React.FC = () => {
         formuläret
         nedan så snart som möjligt.</p>
       <br />
-      <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSdxJImxALW8T4NExT11ufokIF2PjMK8VjrCdSgqa3Yju6H7Mg/viewform?usp=sharing&ouid=107820152812023416530">https://docs.google.com/forms/d/e/1FAIpQLSdxJI</a></p>
+      <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSdxJImxALW8T4NExT11ufokIF2PjMK8VjrCdSgqa3Yju6H7Mg/viewform?usp=sharing&ouid=107820152812023416530" target="_blank">https://docs.google.com/forms/d/e/1FAIpQLSdxJI</a></p>
     </ContentBlock>
   )
 }
