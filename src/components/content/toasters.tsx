@@ -32,7 +32,7 @@ const Toasters: React.FC = () => {
         Toastmaster: Mikael Nordmark
         <br />
         <br />
-        Tal, spex eller annat påhitt anmäls till toastparet på <EmailLink />.
+        Tal, spex eller annat påhitt anmäls till toastparet på <EmailLink />
         <br />
         <br />
         Till toastparet kan du även vända dig om du har några frågor eller
