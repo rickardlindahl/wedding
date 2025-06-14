@@ -5,7 +5,7 @@ import EmailLink from "../email-link"
 
 export const id = "sunday"
 
-export const title = "Söndag 9/8"
+export const title = "Söndag 10/8"
 
 const Sunday: React.FC = () => {
   const data = useStaticQuery(graphql`
@@ -28,24 +28,16 @@ const Sunday: React.FC = () => {
     >
       <p>
         Vi vill umgås med er så mycket som möjligt under denna helg! Därför
-        träffas de som vill och äter lunch tillsammans på söndagen.
+        träffas de som vill och kan för lunch tillsammans på söndagen.
       </p>
       <br />
-      <p>12.00 - 14.30</p>
-      <p>Scandic Plaza Umeå</p>
+      <p>Vi återkommer med mer information gällande detta när vi vet hur många vi blir.</p>
       <br />
-      <p>
-        Buffé: Ångad laxfilé med tomat, fänkål och saffranssås, aioli och kokt
-        potatis. Serveras med sallad, bröd, smör och bordsvatten.
-      </p>
-      <p>Pris: 149 kr / person</p>
-      <p>Kaffe/te: 27 kr / person</p>
+      <p>Vill ni vara med? Vi är tacksamma om ni fyller i 
+        formuläret
+        nedan så snart som möjligt.</p>
       <br />
-      <p>Tiden är preliminär tills vi vet hur många vi blir.</p>
-      <br />
-      <p>
-        Anmäl om du vill delta till toastparet på <EmailLink />.
-      </p>
+      <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSdxJImxALW8T4NExT11ufokIF2PjMK8VjrCdSgqa3Yju6H7Mg/viewform?usp=sharing&ouid=107820152812023416530">https://docs.google.com/forms/d/e/1FAIpQLSdxJI</a></p>
     </ContentBlock>
   )
 }

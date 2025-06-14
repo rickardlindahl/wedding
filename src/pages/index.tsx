@@ -9,6 +9,7 @@ import * as SpeechAndSpex from "../components/content/speech-and-spex"
 import * as Food from "../components/content/food"
 import * as Timeline from "../components/content/timeline"
 import * as Toasters from "../components/content/toasters"
+import * as Sunday from "../components/content/sunday"
 import Modal from "../components/modal"
 import Hamburger from "../components/hamburger"
 import Footer from "../components/footer"
@@ -21,6 +22,7 @@ const blocks = [
   Party,
   Toasters,
   Timeline,
+  Sunday,
 ]
 
 const IndexPage: React.FC = () => {
