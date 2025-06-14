@@ -14,7 +14,7 @@ const Timeline: React.FC = () => {
     query {
       placeholderImage: file(relativePath: { eq: "brollopsbild.jpg" }) {
         childImageSharp {
-          fixed(width: 300, height: 300, cropFocus: WEST) {
+          fixed(width: 300, height: 300) {
             ...GatsbyImageSharpFixed
           }
         }
