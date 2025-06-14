@@ -28,6 +28,8 @@ const Ceremony: React.FC = () => {
       <p>16.00</p>
       <p>Vi träffas på Druidgårdens innergård för härligt mingel och tilltugg. Njut av stämningen och hälsa på alla nya och gamla vänner.</p>
       <p>Efter minglet hålls en kortare ceremoni innan vi fortsätter firandet inomhus.</p>
+      <br />
+      <p>Vi har ingen klädkod för bröllopsfesten. Kom gärna i något ni känner er fina och glada i.</p>
     </ContentBlock>
   )
 }
