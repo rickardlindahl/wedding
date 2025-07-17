@@ -30,6 +30,8 @@ const Ceremony: React.FC = () => {
       <p>Efter minglet hålls en kortare ceremoni innan vi fortsätter firandet inomhus.</p>
       <br />
       <p>Vi har ingen klädkod för bröllopsfesten. Kom gärna i något ni känner er fina och glada i.</p>
+      <br />
+      <p>Plats: <a href="https://maps.app.goo.gl/NnvBF8iUWn6EMzp38" target="_blank">Druidgården, Storgatan 67, 903 30 Umeå</a></p>
     </ContentBlock>
   )
 }
